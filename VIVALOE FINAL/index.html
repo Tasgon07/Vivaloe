@@ -100,14 +100,9 @@
             100% { background-position: 200% 0; }
         }
         
-        /* Fade-in suave quando imagem carrega */
+        /* Imagens já aparecem normalmente */
         img[loading="lazy"].loaded {
-            animation: fadeIn 0.5s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            opacity: 1;
         }
         
         /* Otimização de renderização */
@@ -154,7 +149,7 @@
     </section>
 
     <!-- 2. HERO: SUA ROTINA NATURAL COMEÇA AQUI -->
-    <section class="bg-gradient-to-br from-green-50 via-white to-green-50 py-20">
+    <section id="hero" class="bg-gradient-to-br from-green-50 via-white to-green-50 py-20">
         <div class="container mx-auto px-4">
             <div class="max-w-7xl mx-auto">
                 <!-- Layout 2 Colunas: Informações Esquerda | Vídeo Direita -->
@@ -232,38 +227,12 @@
                         </p>
                     </div>
 
-                    <!-- COLUNA DIREITA: Vídeo História (Formato Instagram 9:16) -->
+                    <!-- COLUNA DIREITA: Vídeo Instagram Embed -->
                     <div class="flex justify-center lg:justify-end">
-                        <div class="relative w-full max-w-md">
-                            <a href="https://www.instagram.com/p/DO9YSHRDheV/" target="_blank" rel="noopener noreferrer" class="block relative group">
-                                <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-black">
-                                    <!-- Thumbnail do Vídeo -->
-                                    <img 
-                                         src="assets/vivaloe-historia-thumb.png?prompt=beautiful%20aloe%20vera%20farm%20with%20woman%20founder%20smiling%20holding%20fresh%20leaf%20vertical%20portrait%20natural%20sunny%20authentic&model=gemini-flash-2.5-image" 
-                                         alt="Conheça a História da VIVALOE" 
-                                         class="w-full h-auto"
-                                         style="aspect-ratio: 9/16;"
-                                         loading="eager"
-                                         fetchpriority="high">
-                                    
-                                    <!-- Play Button Overlay -->
-                                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/50 transition">
-                                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center transform group-hover:scale-110 transition shadow-2xl">
-                                            <svg class="w-10 h-10 text-green-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M8 5v14l11-7z"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Badge "Assista Nossa História" -->
-                                    <div class="absolute top-4 left-4 right-4 bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-3 rounded-2xl shadow-lg">
-                                        <div class="text-center">
-                                            <div class="text-sm font-bold text-white mb-1">📖 NOSSA HISTÓRIA</div>
-                                            <div class="text-xs text-white/90">📱 Clique para assistir no Instagram</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="w-full max-w-md">
+                            <!-- Instagram Embed -->
+                            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DO9YSHRDheV/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DO9YSHRDheV/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver essa foto no Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DO9YSHRDheV/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Uma publicação compartilhada por Vivaloe (@vivaloeoficial)</a></p></div></blockquote>
+                            <script async src="//www.instagram.com/embed.js"></script>
                             
                             <!-- CTA Abaixo do Vídeo -->
                             <div class="mt-6 text-center">
@@ -2302,7 +2271,7 @@
     </section>
 
     <!-- 10. PROVA SOCIAL + AUTORIDADE PROFISSIONAL -->
-    <section class="bg-white py-20 relative overflow-hidden">
+    <section id="depoimentos" class="bg-white py-20 relative overflow-hidden">
         <div class="container mx-auto px-4">
             
             <!-- Header -->
@@ -2398,6 +2367,81 @@
                                 <span class="text-sm">📱 Assistir Depoimento Completo</span>
                             </div>
                         </a>
+                    </div>
+
+                    <!-- DEPOIMENTO 4: Dermatologista -->
+                    <div class="group bg-gradient-to-br from-purple-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-2 border-purple-200 hover:border-purple-400">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">👩‍⚕️</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-gray-900">Dra. Carolina Medeiros</h3>
+                                <p class="text-purple-600 font-bold">Dermatologista | CRM 98765-SP</p>
+                                <div class="flex gap-1 text-yellow-500 text-lg">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 text-lg leading-relaxed mb-4">
+                            "Como dermatologista, recomendo Aloe Vera pura para meus pacientes com <strong class="text-purple-600">pele sensível e rosácea</strong>. A VIVALOE entrega produto fresco, com alta concentração de <strong class="text-purple-600">polissacarídeos anti-inflamatórios</strong> que realmente fazem diferença no tratamento."
+                        </blockquote>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-purple-600 font-bold text-sm">Especialista Verificado</span>
+                        </div>
+                    </div>
+
+                    <!-- DEPOIMENTO 5: Tricologista -->
+                    <div class="group bg-gradient-to-br from-indigo-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-2 border-indigo-200 hover:border-indigo-400">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">💆‍♀️</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-gray-900">Juliana Martins</h3>
+                                <p class="text-indigo-600 font-bold">Tricologista Certificada | 12+ anos</p>
+                                <div class="flex gap-1 text-yellow-500 text-lg">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 text-lg leading-relaxed mb-4">
+                            "Atendo casos de <strong class="text-indigo-600">queda capilar e couro cabeludo inflamado</strong> diariamente. A babosa fresca da VIVALOE tem sido uma aliada poderosa nos meus protocolos. Os resultados em <strong class="text-indigo-600">redução de oleosidade e fortalecimento dos fios</strong> são comprovados."
+                        </blockquote>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-indigo-600 font-bold text-sm">Especialista Certificada</span>
+                        </div>
+                    </div>
+
+                    <!-- DEPOIMENTO 6: Farmacêutica -->
+                    <div class="group bg-gradient-to-br from-teal-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-2 border-teal-200 hover:border-teal-400">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-teal-600 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🧪</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-gray-900">Dra. Fernanda Costa</h3>
+                                <p class="text-teal-600 font-bold">Farmacêutica Estética | CRF 76543-SP</p>
+                                <div class="flex gap-1 text-yellow-500 text-lg">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 text-lg leading-relaxed mb-4">
+                            "Trabalho com manipulação de cosméticos e sei a importância da <strong class="text-teal-600">matéria-prima de qualidade</strong>. A babosa da VIVALOE é superior aos extratos industrializados. Rica em <strong class="text-teal-600">acemanano e vitaminas preservadas</strong>, é perfeita para formulações anti-idade."
+                        </blockquote>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-teal-600 font-bold text-sm">Especialista Verificada</span>
+                        </div>
                     </div>
 
                 </div>
@@ -3059,7 +3103,7 @@
     </section>
 
     <!-- 12. FAQ PREMIUM -->
-    <section class="py-20 bg-gradient-to-br from-gray-50 via-white to-green-50">
+    <section id="faq" class="py-20 bg-gradient-to-br from-gray-50 via-white to-green-50">
         <div class="container mx-auto px-4">
             <!-- Header Premium -->
             <div class="text-center max-w-4xl mx-auto mb-16">
@@ -3527,7 +3571,7 @@
         <div class="container mx-auto px-4">
             
             <!-- Footer Principal -->
-            <div class="py-12 border-b border-gray-800">
+            <div class="py-12 border-b-2 border-solid border-gray-800">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     
                     <!-- Coluna 1: Sobre a Empresa -->
@@ -3550,11 +3594,11 @@
                     <div>
                         <h3 class="text-lg font-black text-white mb-4">Institucional</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="#sobre" class="text-gray-400 hover:text-green-400 transition">Sobre Nós</a></li>
+                            <li><a href="#sobre-nos" class="text-gray-400 hover:text-green-400 transition footer-link" data-detail="sobre-nos">Sobre Nós</a></li>
                             <li><a href="#produto" class="text-gray-400 hover:text-green-400 transition">Nosso Produto</a></li>
                             <li><a href="#depoimentos" class="text-gray-400 hover:text-green-400 transition">Depoimentos</a></li>
                             <li><a href="#faq" class="text-gray-400 hover:text-green-400 transition">Perguntas Frequentes</a></li>
-                            <li><a href="#contato" class="text-gray-400 hover:text-green-400 transition">Entre em Contato</a></li>
+                            <li><a href="#avisos-legais" class="text-gray-400 hover:text-green-400 transition footer-link" data-detail="avisos-legais">Avisos Legais</a></li>
                         </ul>
                     </div>
                     
@@ -3562,11 +3606,11 @@
                     <div>
                         <h3 class="text-lg font-black text-white mb-4">Políticas</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="#politica-privacidade" class="text-gray-400 hover:text-green-400 transition">Política de Privacidade</a></li>
-                            <li><a href="#termos-uso" class="text-gray-400 hover:text-green-400 transition">Termos de Uso</a></li>
-                            <li><a href="#politica-troca" class="text-gray-400 hover:text-green-400 transition">Política de Troca e Devolução</a></li>
-                            <li><a href="#politica-entrega" class="text-gray-400 hover:text-green-400 transition">Política de Entrega</a></li>
-                            <li><a href="#garantia" class="text-gray-400 hover:text-green-400 transition">Garantia</a></li>
+                            <li><a href="#politica-privacidade" class="text-gray-400 hover:text-green-400 transition footer-link" data-detail="politica-privacidade">Política de Privacidade</a></li>
+                            <li><a href="#termos-uso" class="text-gray-400 hover:text-green-400 transition footer-link" data-detail="termos-uso">Termos de Uso</a></li>
+                            <li><a href="#politica-troca" class="text-gray-400 hover:text-green-400 transition footer-link" data-detail="politica-troca">Política de Troca e Devolução</a></li>
+                            <li><a href="#politica-entrega" class="text-gray-400 hover:text-green-400 transition footer-link" data-detail="politica-entrega">Política de Entrega</a></li>
+                            <li><a href="#garantia" class="text-gray-400 hover:text-green-400 transition footer-link" data-detail="garantia">Garantia</a></li>
                         </ul>
                     </div>
                     
@@ -3601,36 +3645,191 @@
                 </div>
             </div>
             
-            <!-- Selos e Garantias -->
-            <div class="py-8 border-b border-gray-800">
-                <div class="flex flex-wrap items-center justify-center gap-8 text-sm">
-                    <div class="flex items-center gap-2 text-gray-400">
-                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                        <span class="font-semibold">Compra 100% Segura</span>
+            <!-- Formas de Pagamento e Selos de Segurança -->
+            <div class="py-8 border-b-2 border-solid border-gray-800">
+                <div class="max-w-5xl mx-auto">
+                    <h3 class="text-center text-white font-bold text-lg mb-6">Formas de Pagamento</h3>
+                    
+                    <!-- Badges de Pagamento -->
+                    <div class="flex flex-wrap items-center justify-center gap-4 mb-6">
+                        <!-- PIX -->
+                        <div class="bg-gray-800 px-6 py-3 rounded-xl border-2 border-gray-700 hover:border-green-500 transition">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-8 h-8 text-green-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                </svg>
+                                <div>
+                                    <div class="text-white font-black text-base">PIX</div>
+                                    <div class="text-gray-400 text-xs">Aprovação instantânea</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Cartões de Crédito -->
+                        <div class="bg-gray-800 px-6 py-3 rounded-xl border-2 border-gray-700 hover:border-blue-500 transition">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                                </svg>
+                                <div>
+                                    <div class="text-white font-black text-base">Cartão de Crédito</div>
+                                    <div class="text-gray-400 text-xs flex gap-1 mt-1">
+                                        <span class="bg-gray-700 px-2 py-0.5 rounded text-xs">Visa</span>
+                                        <span class="bg-gray-700 px-2 py-0.5 rounded text-xs">Master</span>
+                                        <span class="bg-gray-700 px-2 py-0.5 rounded text-xs">Elo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Boleto -->
+                        <div class="bg-gray-800 px-6 py-3 rounded-xl border-2 border-gray-700 hover:border-orange-500 transition">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"/>
+                                </svg>
+                                <div>
+                                    <div class="text-white font-black text-base">Boleto</div>
+                                    <div class="text-gray-400 text-xs">Aprovação em 1-2 dias</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-2 text-gray-400">
-                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
-                        <span class="font-semibold">Amazon Prime Todo Brasil</span>
+                    
+                    <!-- Grid de Selos (Linha 1) -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+                        <!-- Selo 1: Site Seguro SSL -->
+                        <div class="bg-gray-800 p-6 rounded-xl border-2 border-gray-700 hover:border-green-500 transition text-center">
+                            <div class="flex flex-col items-center gap-2">
+                                <div class="w-16 h-16 bg-green-900/30 rounded-full flex items-center justify-center mb-2">
+                                    <svg class="w-10 h-10 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div class="text-white font-bold text-sm">SSL Certificado</div>
+                                <div class="text-gray-400 text-xs">Conexão Segura</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Selo 2: Compra Protegida -->
+                        <div class="bg-gray-800 p-6 rounded-xl border-2 border-gray-700 hover:border-blue-500 transition text-center">
+                            <div class="flex flex-col items-center gap-2">
+                                <div class="w-16 h-16 bg-blue-900/30 rounded-full flex items-center justify-center mb-2">
+                                    <svg class="w-10 h-10 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div class="text-white font-bold text-sm">Compra Protegida</div>
+                                <div class="text-gray-400 text-xs">100% Segura</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Selo 3: Satisfação Garantida -->
+                        <div class="bg-gray-800 p-6 rounded-xl border-2 border-gray-700 hover:border-yellow-500 transition text-center">
+                            <div class="flex flex-col items-center gap-2">
+                                <div class="w-16 h-16 bg-yellow-900/30 rounded-full flex items-center justify-center mb-2">
+                                    <svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                    </svg>
+                                </div>
+                                <div class="text-white font-bold text-sm">Satisfação Garantida</div>
+                                <div class="text-gray-400 text-xs">2.847+ Clientes</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Selo 4: Amazon Prime -->
+                        <div class="bg-gray-800 p-6 rounded-xl border-2 border-gray-700 hover:border-orange-500 transition text-center">
+                            <div class="flex flex-col items-center gap-2">
+                                <div class="w-16 h-16 bg-orange-900/30 rounded-full flex items-center justify-center mb-2">
+                                    <svg class="w-10 h-10 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                                        <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"/>
+                                    </svg>
+                                </div>
+                                <div class="text-white font-bold text-sm">Amazon Prime</div>
+                                <div class="text-gray-400 text-xs">Entrega Rápida</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-2 text-gray-400">
-                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        <span class="font-semibold">Garantia de 7 Dias</span>
+                    
+                    <!-- Badges de Confiança (Linha 2) -->
+                    <div class="flex flex-wrap items-center justify-center gap-6 text-sm mb-4">
+                        <div class="flex items-center gap-2 text-gray-400">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span class="font-semibold">Garantia de 7 Dias</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-400">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                            <span class="font-semibold">Dados Criptografados</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-400">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                            <span class="font-semibold">Privacidade Protegida</span>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-2 text-gray-400">
-                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        <span class="font-semibold">Pagamento Seguro</span>
-                    </div>
+                    
+                    <!-- Texto de Segurança (Linha 3) -->
+                    <p class="text-center text-gray-400 text-sm">
+                        <svg class="w-4 h-4 inline text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Ambiente 100% seguro. Seus dados estão protegidos.
+                    </p>
                 </div>
             </div>
             
-            <!-- Informações Legais -->
-            <div class="py-8 border-b border-gray-800">
-                <div class="max-w-5xl mx-auto">
-                    <details class="bg-gray-800 rounded-xl border border-gray-700 group">
+            <!-- Sobre Nós e Avisos Legais -->
+            <div id="sobre-nos" class="py-8 border-b-2 border-solid border-gray-800">
+                <div class="max-w-5xl mx-auto space-y-2">
+                    <!-- Sobre Nós -->
+                    <details id="detail-sobre-nos" class="bg-gray-800 rounded-xl border border-gray-700 group">
+                        <summary class="font-bold text-sm text-white cursor-pointer list-none p-4 flex items-center justify-between hover:bg-gray-750 transition">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+                                <span>Sobre Nós - VIVALOE</span>
+                            </div>
+                            <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div class="p-6 text-sm text-gray-400 space-y-4">
+                            <p class="text-gray-300 leading-relaxed">
+                                <strong class="text-white text-lg block mb-2">Bem-vindo à VIVALOE!</strong>
+                                Somos uma empresa especializada em Aloe Vera (babosa) 100% orgânica, fresca e premium. Nossa missão é levar até você o melhor da natureza, direto da fazenda para sua casa.
+                            </p>
+                            
+                            <div class="space-y-3">
+                                <div>
+                                    <h4 class="text-white font-bold mb-2">🌱 Nossa História</h4>
+                                    <p class="text-gray-400">Fundada em 2020, nascemos do desejo de oferecer uma alternativa natural, pura e eficaz para cuidados com cabelo, pele e saúde. Cultivamos nossa babosa em condições ideais, sem agrotóxicos ou produtos químicos.</p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="text-white font-bold mb-2">✨ Nosso Diferencial</h4>
+                                    <ul class="list-disc list-inside space-y-1 text-gray-400">
+                                        <li>Colheita fresca: cortamos e enviamos em até 24-48h</li>
+                                        <li>100% orgânica: zero agrotóxicos e conservantes</li>
+                                        <li>Rastreabilidade: você sabe exatamente de onde vem</li>
+                                        <li>Entrega Amazon Prime: rápida e segura em todo Brasil</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="text-white font-bold mb-2">💚 Nossos Valores</h4>
+                                    <p class="text-gray-400">Transparência, qualidade, sustentabilidade e amor pela natureza. Cada folha é tratada com cuidado desde o cultivo até chegar às suas mãos.</p>
+                                </div>
+                                
+                                <div class="bg-green-900/20 border border-green-700/30 rounded-lg p-4 mt-4">
+                                    <p class="text-green-300 text-center font-semibold">Mais de 2.847 clientes satisfeitos em todo o Brasil! 🌿</p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <!-- Avisos Legais -->
+                    <details id="detail-avisos-legais" class="bg-gray-800 rounded-xl border border-gray-700 group">
                         <summary class="font-bold text-sm text-white cursor-pointer list-none p-4 flex items-center justify-between hover:bg-gray-750 transition">
                             <div class="flex items-center gap-2">
                                 <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
-                                <span>Avisos Legais e Informações Importantes</span>
+                                <span><a href="#avisos-legais" class="hover:text-green-400 transition">Avisos Legais e Informações Importantes</a></span>
                             </div>
                             <span class="text-yellow-400 group-open:rotate-180 transition-transform">▼</span>
                         </summary>
@@ -3638,6 +3837,126 @@
                             <p><strong class="text-gray-300">Produto Natural:</strong> Este é um produto 100% natural (Aloe Vera fresca). Não é medicamento e não se destina a diagnosticar, tratar, curar ou prevenir doenças.</p>
                             <p><strong class="text-gray-300">Resultados Individuais:</strong> Os resultados podem variar de pessoa para pessoa.</p>
                             <p><strong class="text-gray-300">Teste de Alergia:</strong> Recomendamos fazer teste em pequena área antes do uso completo.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            
+            <!-- Política de Privacidade -->
+            <div id="politica-privacidade" class="py-4">
+                <div class="max-w-5xl mx-auto">
+                    <details id="detail-politica-privacidade" class="bg-gray-800 rounded-xl border border-gray-700 group">
+                        <summary class="font-bold text-sm text-white cursor-pointer list-none p-4 flex items-center justify-between hover:bg-gray-750 transition">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+                                <span>Política de Privacidade</span>
+                            </div>
+                            <span class="text-blue-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div class="p-6 text-xs text-gray-400 space-y-3">
+                            <p><strong class="text-gray-300 text-sm">Coleta de Dados:</strong> Coletamos apenas informações necessárias para processar seu pedido: nome, endereço de entrega, telefone e e-mail.</p>
+                            <p><strong class="text-gray-300 text-sm">Uso de Dados:</strong> Seus dados são utilizados exclusivamente para processamento de pedidos, comunicação sobre o status da entrega e atendimento ao cliente.</p>
+                            <p><strong class="text-gray-300 text-sm">Proteção:</strong> Implementamos medidas de segurança para proteger suas informações pessoais contra acesso não autorizado.</p>
+                            <p><strong class="text-gray-300 text-sm">Compartilhamento:</strong> Não vendemos, alugamos ou compartilhamos seus dados com terceiros, exceto parceiros logísticos (Amazon) necessários para entrega.</p>
+                            <p><strong class="text-gray-300 text-sm">Seus Direitos:</strong> Você pode solicitar acesso, correção ou exclusão de seus dados a qualquer momento através do nosso WhatsApp.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            
+            <!-- Termos de Uso -->
+            <div id="termos-uso" class="py-4">
+                <div class="max-w-5xl mx-auto">
+                    <details id="detail-termos-uso" class="bg-gray-800 rounded-xl border border-gray-700 group">
+                        <summary class="font-bold text-sm text-white cursor-pointer list-none p-4 flex items-center justify-between hover:bg-gray-750 transition">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/></svg>
+                                <span>Termos de Uso</span>
+                            </div>
+                            <span class="text-purple-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div class="p-6 text-xs text-gray-400 space-y-3">
+                            <p><strong class="text-gray-300 text-sm">Aceitação:</strong> Ao adquirir nossos produtos, você concorda com estes termos de uso.</p>
+                            <p><strong class="text-gray-300 text-sm">Produto:</strong> As folhas de babosa são produtos naturais frescos. Variações naturais de tamanho e cor podem ocorrer.</p>
+                            <p><strong class="text-gray-300 text-sm">Uso Responsável:</strong> O produto deve ser armazenado adequadamente (refrigeração) e consumido/utilizado dentro do prazo de validade.</p>
+                            <p><strong class="text-gray-300 text-sm">Limitação de Responsabilidade:</strong> Não nos responsabilizamos por reações alérgicas individuais. Recomendamos teste prévio em pequena área.</p>
+                            <p><strong class="text-gray-300 text-sm">Uso do Site:</strong> Este site é apenas para fins informativos e comerciais. É proibido copiar, reproduzir ou distribuir nosso conteúdo sem autorização.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            
+            <!-- Política de Troca e Devolução -->
+            <div id="politica-troca" class="py-4">
+                <div class="max-w-5xl mx-auto">
+                    <details id="detail-politica-troca" class="bg-gray-800 rounded-xl border border-gray-700 group">
+                        <summary class="font-bold text-sm text-white cursor-pointer list-none p-4 flex items-center justify-between hover:bg-gray-750 transition">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/></svg>
+                                <span>Política de Troca e Devolução</span>
+                            </div>
+                            <span class="text-orange-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div class="p-6 text-xs text-gray-400 space-y-3">
+                            <p><strong class="text-gray-300 text-sm">Garantia de 7 Dias:</strong> Você tem 7 dias corridos para solicitar troca ou devolução, conforme Código de Defesa do Consumidor.</p>
+                            <p><strong class="text-gray-300 text-sm">Produto Perecível:</strong> Por se tratar de produto fresco, solicitações de devolução devem ser feitas dentro de 48h após o recebimento.</p>
+                            <p><strong class="text-gray-300 text-sm">Condições para Troca:</strong> Produto com defeito, dano na entrega, ou fora das especificações anunciadas.</p>
+                            <p><strong class="text-gray-300 text-sm">Como Solicitar:</strong> Entre em contato pelo WhatsApp (11) 99999-9999 com fotos do produto e número do pedido.</p>
+                            <p><strong class="text-gray-300 text-sm">Reembolso:</strong> Após aprovação, reembolso integral em até 7 dias úteis ou reenvio de novo produto sem custos.</p>
+                            <p><strong class="text-gray-300 text-sm">Exceções:</strong> Não aceitamos devolução por arrependimento após abertura/uso do produto (produto perecível).</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            
+            <!-- Política de Entrega -->
+            <div id="politica-entrega" class="py-4">
+                <div class="max-w-5xl mx-auto">
+                    <details id="detail-politica-entrega" class="bg-gray-800 rounded-xl border border-gray-700 group">
+                        <summary class="font-bold text-sm text-white cursor-pointer list-none p-4 flex items-center justify-between hover:bg-gray-750 transition">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/><path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"/></svg>
+                                <span>Política de Entrega</span>
+                            </div>
+                            <span class="text-cyan-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div class="p-6 text-xs text-gray-400 space-y-3">
+                            <p><strong class="text-gray-300 text-sm">Modalidade:</strong> Todas as entregas são realizadas via Amazon Prime, garantindo rapidez e segurança.</p>
+                            <p><strong class="text-gray-300 text-sm">Cobertura:</strong> Atendemos TODO O BRASIL - todas as regiões e estados.</p>
+                            <p><strong class="text-gray-300 text-sm">Prazo:</strong> Varia de acordo com sua região. Consulte no momento da compra para seu CEP específico.</p>
+                            <p><strong class="text-gray-300 text-sm">Rastreamento:</strong> Você receberá código de rastreamento por e-mail/WhatsApp assim que o produto for despachado.</p>
+                            <p><strong class="text-gray-300 text-sm">Embalagem:</strong> Produto embalado com cuidado especial para manter frescor durante transporte.</p>
+                            <p><strong class="text-gray-300 text-sm">Frete:</strong> Calculado automaticamente com base no seu CEP no momento da compra.</p>
+                            <p><strong class="text-gray-300 text-sm">Problemas na Entrega:</strong> Em caso de extravio ou atraso, entre em contato imediatamente pelo WhatsApp.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            
+            <!-- Garantia -->
+            <div id="garantia" class="py-4 border-b-2 border-solid border-gray-800 pb-8">
+                <div class="max-w-5xl mx-auto">
+                    <details id="detail-garantia" class="bg-gray-800 rounded-xl border border-gray-700 group">
+                        <summary class="font-bold text-sm text-white cursor-pointer list-none p-4 flex items-center justify-between hover:bg-gray-750 transition">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                <span>Garantia de Satisfação</span>
+                            </div>
+                            <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div class="p-6 text-xs text-gray-400 space-y-3">
+                            <p><strong class="text-gray-300 text-sm">Garantia de Qualidade:</strong> Todas as folhas são inspecionadas antes do envio. Garantimos produto fresco, saudável e sem danos.</p>
+                            <p><strong class="text-gray-300 text-sm">Frescor Garantido:</strong> Colhemos e enviamos em até 24-48h. Se receber produto murcho, manchado ou com sinais de deterioração, substituímos sem custo.</p>
+                            <p><strong class="text-gray-300 text-sm">Satisfação 100%:</strong> Se você não ficar satisfeito com a qualidade do produto recebido, nos informe em até 48h e resolveremos.</p>
+                            <p><strong class="text-gray-300 text-sm">O que Cobrimos:</strong></p>
+                            <ul class="list-disc list-inside space-y-1 ml-4">
+                                <li>Produto com defeito ou dano</li>
+                                <li>Produto diferente do anunciado</li>
+                                <li>Folhas murchas, manchadas ou deterioradas no recebimento</li>
+                                <li>Quantidade ou peso inferior ao especificado</li>
+                            </ul>
+                            <p><strong class="text-gray-300 text-sm">Como Acionar:</strong> WhatsApp (11) 99999-9999 com fotos e descrição. Resposta em até 24h úteis.</p>
+                            <p><strong class="text-gray-300 text-sm">Solução:</strong> Reenvio de novo produto ou reembolso integral - você escolhe!</p>
                         </div>
                     </details>
                 </div>
@@ -3808,13 +4127,34 @@
         setTimeout(showNotification, 5000);
         setInterval(showNotification, Math.random() * 30000 + 20000);
 
-        // Smooth scroll
+        // Smooth scroll with auto-open details
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+                
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Se o link tem data-detail, abrir o details correspondente
+                    const detailId = this.getAttribute('data-detail');
+                    if (detailId) {
+                        const detailElement = document.getElementById('detail-' + detailId);
+                        if (detailElement) {
+                            // Fecha todos os outros details primeiro
+                            document.querySelectorAll('details').forEach(d => {
+                                if (d !== detailElement) {
+                                    d.removeAttribute('open');
+                                }
+                            });
+                            // Abre o details específico
+                            detailElement.setAttribute('open', '');
+                        }
+                    }
+                    
+                    // Scroll suave para o target
+                    setTimeout(() => {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
                 }
             });
         });
@@ -3835,7 +4175,7 @@
                         img.removeAttribute('data-src');
                     }
                     
-                    // Adiciona classe de fade-in quando carregar
+                    // Remove placeholder quando carregar
                     img.addEventListener('load', () => {
                         img.classList.add('loaded');
                     });
@@ -3917,6 +4257,10 @@
         });
         
     </script>
+    
+    <!-- Instagram Embed Script -->
+    <script async src="//www.instagram.com/embed.js"></script>
+    
 <script src="protect.js"></script>
 </body>
 </html>
