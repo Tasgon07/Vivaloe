@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kit 3 Folhas Babosa Fresca 42% OFF | VIVALOE</title>
-    <meta name="description" content="Babosa fresca premium direto da fazenda. 42% OFF + Frete Grátis. 900-1200ml gel puro. Cabelo, pele e saúde transformados!">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Babosa fresca premium direto da fazenda. 42% OFF + Frete Amazon Prime TODO BRASIL. 900-1200ml gel puro. Cabelo, pele e saúde transformados!">
+    
+    <!-- Preconnect para recursos externos -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <!-- ===========================================
        PROTEÇÃO ANTI-PLÁGIO VIVALOE
@@ -73,6 +83,51 @@
             scroll-behavior: smooth;
         }
         #notificationPopup.show { transform: translateX(0); }
+        
+        /* ===========================================
+           OTIMIZAÇÕES DE PERFORMANCE - LAZY LOADING
+           =========================================== */
+        
+        /* Placeholder para imagens lazy */
+        img[loading="lazy"] {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        /* Fade-in suave quando imagem carrega */
+        img[loading="lazy"].loaded {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Otimização de renderização */
+        img {
+            content-visibility: auto;
+            contain-intrinsic-size: 500px;
+        }
+        
+        /* Will-change para animações */
+        .animate-pulse,
+        .hover\:scale-105:hover,
+        .hover\:scale-110:hover {
+            will-change: transform;
+        }
+        
+        /* Otimização de scroll */
+        section {
+            content-visibility: auto;
+            contain-intrinsic-size: 800px;
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -187,7 +242,9 @@
                                          src="assets/vivaloe-historia-thumb.png?prompt=beautiful%20aloe%20vera%20farm%20with%20woman%20founder%20smiling%20holding%20fresh%20leaf%20vertical%20portrait%20natural%20sunny%20authentic&model=gemini-flash-2.5-image" 
                                          alt="Conheça a História da VIVALOE" 
                                          class="w-full h-auto"
-                                         style="aspect-ratio: 9/16;">
+                                         style="aspect-ratio: 9/16;"
+                                         loading="eager"
+                                         fetchpriority="high">
                                     
                                     <!-- Play Button Overlay -->
                                     <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/50 transition">
@@ -244,7 +301,7 @@
                         <div class="text-center">
                             <div class="text-sm text-gray-600 mb-1">De <span class="line-through">R$ 99,80</span></div>
                             <div class="text-5xl font-black text-green-700 mb-2">R$ 57,90</div>
-                            <div class="text-lg font-bold text-green-700">🎁 Economize 42% + E-book GRÁTIS</div>
+                            <div class="text-lg font-bold text-green-700">🎁 Economize 42% + 📦 Amazon Prime TODO BRASIL</div>
                         </div>
                     </div>
 
@@ -269,14 +326,15 @@
                     
                     <div class="flex items-center justify-center gap-4 text-sm text-gray-600">
                         <span>🔒 Compra Segura</span>
-                        <span>🚚 Entrega Rápida</span>
+                        <span>📦 Amazon Prime</span>
                         <span>✓ Garantia 7 Dias</span>
                     </div>
                 </div>
                 <div class="relative">
                     <img src="assets/xOAv00MIlvSRUEogSmvpZ.jpeg" 
                          alt="Kit 3 Folhas VIVALOE - Produto Real com Embalagem Premium" 
-                         class="rounded-3xl shadow-2xl w-full object-cover">
+                         class="rounded-3xl shadow-2xl w-full object-cover"
+                         loading="lazy">
                     <div class="absolute -bottom-4 -left-4 bg-white p-4 rounded-2xl shadow-xl">
                         <div class="text-green-600 font-black text-3xl">900-1200ml</div>
                         <div class="text-gray-700 font-semibold">Gel Puro Total</div>
@@ -341,7 +399,8 @@
                         <div class="rounded-3xl overflow-hidden shadow-2xl">
                             <img src="assets/lliashSPRUUAaBgNyYMaK.jpeg" 
                                  alt="Fundadora VIVALOE preparando folhas frescas de Aloe Vera" 
-                                 class="w-full h-auto">
+                                 class="w-full h-auto"
+                                 loading="lazy">
                         </div>
                         
                         <!-- Badge Flutuante -->
@@ -709,228 +768,7 @@
         </div>
     </section>
 
-    <!-- 4. ANTES E DEPOIS - TRANSFORMAÇÕES REAIS -->
-    <section class="bg-white py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <div class="inline-block bg-green-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-                    📊 RESULTADOS COMPROVADOS
-                </div>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-                    Resultados Reais com Uso Contínuo
-                </h2>
-                <p class="text-xl text-gray-600">
-                    Arraste o slider para ver o antes e depois | Resultados variam por pessoa
-                </p>
-            </div>
 
-            <div class="max-w-6xl mx-auto">
-                <!-- Tabs de Categorias -->
-                <div class="flex justify-center gap-4 mb-8 flex-wrap">
-                    <button onclick="showBeforeAfter(0)" id="tab-0" class="before-after-tab px-6 py-3 rounded-full font-bold text-sm transition bg-green-600 text-white shadow-lg">
-                        💁‍♀️ Cabelos
-                    </button>
-                    <button onclick="showBeforeAfter(1)" id="tab-1" class="before-after-tab px-6 py-3 rounded-full font-bold text-sm transition bg-gray-200 text-gray-700 hover:bg-gray-300">
-                        ✨ Pele
-                    </button>
-                    <button onclick="showBeforeAfter(2)" id="tab-2" class="before-after-tab px-6 py-3 rounded-full font-bold text-sm transition bg-gray-200 text-gray-700 hover:bg-gray-300">
-                        💅 Unhas
-                    </button>
-                </div>
-
-                <!-- Container dos Sliders -->
-                <div id="slider-container-0" class="slider-container">
-                    <div class="bg-gradient-to-br from-green-50 to-white p-6 rounded-3xl shadow-2xl">
-                        <div class="relative overflow-hidden rounded-2xl" style="height: 500px;">
-                            <!-- Imagem Antes (Background) -->
-                            <img src="assets/before-hair-damage.png?prompt=damaged%20dry%20frizzy%20hair%20before%20treatment%20close%20up%20realistic&model=gemini-flash-2.5-image" 
-                                 alt="Antes" 
-                                 class="absolute inset-0 w-full h-full object-cover">
-                            
-                            <!-- Imagem Depois (Overlay com clip) -->
-                            <div id="after-overlay-0" class="absolute inset-0 overflow-hidden" style="clip-path: inset(0 50% 0 0);">
-                                <img src="assets/after-hair-shine.png?prompt=healthy%20shiny%20smooth%20hydrated%20hair%20after%20aloe%20treatment%20glowing%20realistic&model=gemini-flash-2.5-image" 
-                                     alt="Depois" 
-                                     class="absolute inset-0 w-full h-full object-cover">
-                            </div>
-
-                            <!-- Slider Handle -->
-                            <div id="slider-handle-0" class="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-10 shadow-2xl" style="left: 50%;">
-                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-2xl flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <!-- Labels Antes/Depois -->
-                            <div class="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                                ANTES
-                            </div>
-                            <div class="absolute top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                                DEPOIS
-                            </div>
-                        </div>
-
-                        <!-- Info da Transformação -->
-                        <div class="mt-6 grid md:grid-cols-3 gap-4 text-center">
-                            <div class="bg-white p-4 rounded-xl shadow-md">
-                                <div class="text-3xl font-black text-green-600 mb-1">30 dias</div>
-                                <div class="text-sm text-gray-600">Uso diário</div>
-                            </div>
-                            <div class="bg-white p-4 rounded-xl shadow-md">
-                                <div class="text-3xl font-black text-green-600 mb-1">3x/semana</div>
-                                <div class="text-sm text-gray-600">Aplicação</div>
-                            </div>
-                            <div class="bg-white p-4 rounded-xl shadow-md">
-                                <div class="text-3xl font-black text-green-600 mb-1">92%</div>
-                                <div class="text-sm text-gray-600">Satisfação</div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 bg-green-100 p-4 rounded-xl">
-                            <p class="text-gray-700 italic">
-                                <strong>Maria Clara, 28 anos:</strong> "Meu cabelo estava ressecado e quebradiço. Após 1 mês usando babosa 3x por semana, notei melhora na hidratação e brilho. Meus fios ficaram mais macios e saudáveis!"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="slider-container-1" class="slider-container hidden">
-                    <div class="bg-gradient-to-br from-green-50 to-white p-6 rounded-3xl shadow-2xl">
-                        <div class="relative overflow-hidden rounded-2xl" style="height: 500px;">
-                            <!-- Imagem Antes -->
-                            <img src="assets/before-acne-skin.png?prompt=acne%20scars%20dark%20spots%20problematic%20facial%20skin%20before%20treatment%20realistic&model=gemini-flash-2.5-image" 
-                                 alt="Antes" 
-                                 class="absolute inset-0 w-full h-full object-cover">
-                            
-                            <!-- Imagem Depois -->
-                            <div id="after-overlay-1" class="absolute inset-0 overflow-hidden" style="clip-path: inset(0 50% 0 0);">
-                                <img src="assets/after-clear-skin.png?prompt=clear%20smooth%20glowing%20healthy%20facial%20skin%20after%20aloe%20treatment%20radiant%20realistic&model=gemini-flash-2.5-image" 
-                                     alt="Depois" 
-                                     class="absolute inset-0 w-full h-full object-cover">
-                            </div>
-
-                            <!-- Slider Handle -->
-                            <div id="slider-handle-1" class="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-10 shadow-2xl" style="left: 50%;">
-                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-2xl flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <!-- Labels -->
-                            <div class="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                                ANTES
-                            </div>
-                            <div class="absolute top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                                DEPOIS
-                            </div>
-                        </div>
-
-                        <div class="mt-6 grid md:grid-cols-3 gap-4 text-center">
-                            <div class="bg-white p-4 rounded-xl shadow-md">
-                                <div class="text-3xl font-black text-green-600 mb-1">45 dias</div>
-                                <div class="text-sm text-gray-600">Uso regular</div>
-                            </div>
-                            <div class="bg-white p-4 rounded-xl shadow-md">
-                                <div class="text-3xl font-black text-green-600 mb-1">1x/dia</div>
-                                <div class="text-sm text-gray-600">À noite</div>
-                            </div>
-                            <div class="bg-white p-4 rounded-xl shadow-md">
-                                <div class="text-3xl font-black text-green-600 mb-1">72%</div>
-                                <div class="text-sm text-gray-600">Relatam melhora</div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 bg-green-100 p-4 rounded-xl">
-                            <p class="text-gray-700 italic">
-                                <strong>Juliana Santos, 25 anos:</strong> "Uso babosa todo dia antes de dormir. Em 45 dias, percebi que minhas marcas de espinha ficaram mais claras e a pele menos oleosa. Vale a paciência!"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="slider-container-2" class="slider-container hidden">
-                    <div class="bg-gradient-to-br from-green-50 to-white p-6 rounded-3xl shadow-2xl">
-                        <div class="relative overflow-hidden rounded-2xl" style="height: 500px;">
-                            <!-- Imagem Antes -->
-                            <img src="assets/before-weak-nails.png?prompt=damaged%20weak%20brittle%20nails%20cuticles%20dry%20hands%20before%20treatment%20close%20up&model=gemini-flash-2.5-image" 
-                                 alt="Antes" 
-                                 class="absolute inset-0 w-full h-full object-cover">
-                            
-                            <!-- Imagem Depois -->
-                            <div id="after-overlay-2" class="absolute inset-0 overflow-hidden" style="clip-path: inset(0 50% 0 0);">
-                                <img src="assets/after-strong-nails.png?prompt=healthy%20strong%20shiny%20nails%20hydrated%20cuticles%20beautiful%20hands%20after%20aloe%20treatment&model=gemini-flash-2.5-image" 
-                                     alt="Depois" 
-                                     class="absolute inset-0 w-full h-full object-cover">
-                            </div>
-
-                            <!-- Slider Handle -->
-                            <div id="slider-handle-2" class="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-10 shadow-2xl" style="left: 50%;">
-                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-2xl flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <!-- Labels -->
-                            <div class="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                                ANTES
-                            </div>
-                            <div class="absolute top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                                DEPOIS
-                            </div>
-                        </div>
-
-                        <div class="mt-6 grid md:grid-cols-3 gap-4 text-center">
-                            <div class="bg-white p-4 rounded-xl shadow-md">
-                                <div class="text-3xl font-black text-green-600 mb-1">3 semanas</div>
-                                <div class="text-sm text-gray-600">Aplicação diária</div>
-                            </div>
-                            <div class="bg-white p-4 rounded-xl shadow-md">
-                                <div class="text-3xl font-black text-green-600 mb-1">2x/dia</div>
-                                <div class="text-sm text-gray-600">Nas cutículas</div>
-                            </div>
-                            <div class="bg-white p-4 rounded-xl shadow-md">
-                                <div class="text-3xl font-black text-green-600 mb-1">68%</div>
-                                <div class="text-sm text-gray-600">Unhas mais fortes</div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 bg-green-100 p-4 rounded-xl">
-                            <p class="text-gray-700 italic">
-                                <strong>Renata Alves, 31 anos:</strong> "Minhas unhas quebravam facilmente e as cutículas ficavam ressecadas. Passei babosa 2x ao dia por 3 semanas. Agora minhas unhas estão mais resistentes e saudáveis!"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <a href="#comprar" class="inline-block bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl hover:scale-105 transition mb-6">
-                        🌿 Quero Minha Transformação Agora!
-                    </a>
-                    
-                    <div class="max-w-3xl mx-auto bg-yellow-50 border-2 border-yellow-200 rounded-xl p-4 text-left">
-                        <div class="flex items-start gap-3">
-                            <div class="flex-shrink-0">
-                                <svg class="w-5 h-5 text-yellow-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <div class="flex-1">
-                                <p class="text-sm text-gray-700">
-                                    <strong class="text-yellow-800">Aviso Importante:</strong> Os resultados podem variar de pessoa para pessoa. As imagens são ilustrativas. Este é um produto natural, não é medicamento. Consulte um dermatologista em caso de condições pré-existentes.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- 6. BENEFÍCIOS 3 PILARES - VERSÃO INCRÍVEL -->
     <section class="bg-gradient-to-br from-gray-900 via-green-900 to-gray-900 py-20 relative overflow-hidden">
@@ -1217,7 +1055,7 @@
                             </div>
                         </div>
                         <div class="relative">
-                            <img src="assets/t8Wgji-SCz0yXoHqqmwMm.jpeg" alt="Pirâmide de gel VIVALOE mostrando abundância de gel puro e fresco" class="w-full h-auto rounded-2xl shadow-xl">
+                            <img src="assets/t8Wgji-SCz0yXoHqqmwMm.jpeg" alt="Pirâmide de gel VIVALOE mostrando abundância de gel puro e fresco" class="w-full h-auto rounded-2xl shadow-xl" loading="lazy" width="600" height="400">
                             <div class="absolute -top-4 -right-4 bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-black text-sm shadow-xl transform rotate-12">
                                 🔥 MUITO GEL!
                             </div>
@@ -1256,7 +1094,7 @@
 
                             <!-- Foto Concorrente -->
                             <div class="mb-6 rounded-2xl overflow-hidden shadow-xl">
-                                <img src="assets/TZo6t39_nMrFh7T5xfY49.jpeg" alt="Folhas de babosa de concorrentes com qualidade inferior" class="w-full h-auto">
+                                <img src="assets/TZo6t39_nMrFh7T5xfY49.jpeg" alt="Folhas de babosa de concorrentes com qualidade inferior" class="w-full h-auto" loading="lazy" width="500" height="350">
                             </div>
 
                             <!-- Desvantagens -->
@@ -1377,7 +1215,7 @@
 
                             <!-- Foto VIVALOE -->
                             <div class="mb-6 rounded-2xl overflow-hidden shadow-xl">
-                                <img src="assets/7-XYeMfCVQxItODyb42sb.jpeg" alt="Fundadora VIVALOE segurando folha de babosa premium gigante" class="w-full h-auto">
+                                <img src="assets/7-XYeMfCVQxItODyb42sb.jpeg" alt="Fundadora VIVALOE segurando folha de babosa premium gigante" class="w-full h-auto" loading="lazy" width="500" height="350">
                             </div>
 
                             <!-- Vantagens -->
@@ -1668,36 +1506,36 @@
         <div class="container mx-auto px-4 relative z-10">
             
             <!-- Header Explosivo -->
-            <div class="text-center mb-16">
+            <div class="text-center mb-12 md:mb-16 px-4">
                 <div class="inline-block mb-6">
-                    <div class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-black text-lg shadow-2xl animate-pulse border-4 border-green-400">
+                    <div class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-black text-base md:text-lg shadow-2xl animate-pulse border-4 border-green-400">
                         💡 O SEGREDO QUE VAI MUDAR TUDO!
                     </div>
                 </div>
                 
-                <h2 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-6 leading-tight">
                     🧪 Transforme Seus<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-300 to-green-400">Produtos Comuns</span><br>em Versões Premium
                 </h2>
                 
-                <p class="text-2xl md:text-3xl text-green-100 font-bold max-w-4xl mx-auto leading-relaxed">
+                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-green-100 font-bold max-w-4xl mx-auto leading-relaxed px-4">
                     Acrescente até <strong class="text-yellow-300">20% de gel puro</strong> nos seus produtos e crie as <strong class="text-white">versões mais concentradas do mercado!</strong>
                 </p>
             </div>
 
             <!-- DESTAQUE: Vídeo Esteticista Eliane Vasconcelos -->
-            <div class="max-w-5xl mx-auto mb-16">
+            <div class="max-w-5xl mx-auto mb-12 md:mb-16 px-4">
                 <div class="bg-gradient-to-br from-white to-green-50 p-2 rounded-3xl shadow-2xl border-4 border-green-400">
-                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 md:p-12">
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 md:p-8 lg:p-12">
                         
                         <!-- Badge Profissional -->
-                        <div class="text-center mb-8">
-                            <div class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-black text-lg shadow-2xl mb-4 border-4 border-purple-400 animate-pulse">
+                        <div class="text-center mb-6 md:mb-8">
+                            <div class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-black text-base md:text-lg shadow-2xl mb-4 border-4 border-purple-400 animate-pulse">
                                 👩‍⚕️ TÉCNICA PROFISSIONAL REVELADA
                             </div>
                         </div>
 
                         <!-- Grid: Vídeo + Info -->
-                        <div class="grid lg:grid-cols-[1.2fr_1fr] gap-8 items-center">
+                        <div class="grid lg:grid-cols-[1.2fr_1fr] gap-6 md:gap-8 items-center">
                             
                             <!-- COLUNA ESQUERDA: Vídeo da Esteticista -->
                             <div>
@@ -1791,26 +1629,26 @@
             </div>
 
             <!-- Grid de BOOM Mental -->
-            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto mb-16">
                 
                 <!-- CARD 1: SHAMPOO TURBINADO -->
                 <div class="group relative">
                     <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
-                    <div class="relative bg-gradient-to-br from-green-700 to-emerald-800 p-8 rounded-3xl border-4 border-green-500 hover:scale-105 transition duration-300">
+                    <div class="relative bg-gradient-to-br from-green-700 to-emerald-800 p-6 md:p-8 rounded-3xl border-4 border-green-500 hover:scale-105 transition duration-300">
                         <!-- Badge Premium -->
-                        <div class="absolute -top-4 -right-4 bg-yellow-400 text-gray-900 w-20 h-20 rounded-full flex items-center justify-center font-black text-2xl shadow-2xl animate-pulse border-4 border-yellow-300">
+                        <div class="absolute -top-3 -right-3 md:-top-4 md:-right-4 bg-yellow-400 text-gray-900 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center font-black text-xl md:text-2xl shadow-2xl animate-pulse border-4 border-yellow-300">
                             🧪
                         </div>
                         
-                        <div class="flex items-start gap-6 mb-6">
-                            <div class="flex-shrink-0 w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl">
-                                <span class="text-5xl">🧴</span>
+                        <div class="flex flex-col sm:flex-row items-start gap-4 md:gap-6 mb-6">
+                            <div class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl mx-auto sm:mx-0">
+                                <span class="text-4xl md:text-5xl">🧴</span>
                             </div>
-                            <div>
+                            <div class="text-center sm:text-left">
                                 <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full inline-block mb-3">
-                                    <span class="text-white font-black text-sm">FÓRMULA #1</span>
+                                    <span class="text-white font-black text-xs md:text-sm">FÓRMULA #1</span>
                                 </div>
-                                <h3 class="text-3xl font-black text-white mb-2">
+                                <h3 class="text-2xl md:text-3xl font-black text-white mb-2">
                                     Shampoo + Babosa
                                 </h3>
                                 <p class="text-green-200 text-sm font-bold">
@@ -1819,37 +1657,67 @@
                             </div>
                         </div>
 
-                        <div class="bg-white/20 backdrop-blur-sm p-6 rounded-2xl border-2 border-white/30 mb-4">
+                        <!-- Nova Função do Produto -->
+                        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-4 rounded-xl mb-4">
+                            <p class="text-gray-900 font-black text-sm md:text-base text-center">
+                                🎯 NOVA FUNÇÃO: Limpeza + Tratamento Capilar Intensivo
+                            </p>
+                        </div>
+
+                        <div class="bg-white/20 backdrop-blur-sm p-4 md:p-6 rounded-2xl border-2 border-white/30 mb-4">
                             <div class="bg-green-600 px-4 py-2 rounded-lg mb-4 text-center">
-                                <p class="text-white font-black text-lg">
+                                <p class="text-white font-black text-base md:text-lg">
                                     📊 ADICIONE ATÉ 20% DE GEL PURO
                                 </p>
                             </div>
-                            <p class="text-white text-base leading-relaxed mb-4">
+                            <p class="text-white text-sm md:text-base leading-relaxed mb-4">
                                 Você criará o <strong>shampoo mais concentrado do mercado</strong>, potencializando os benefícios do produto original + adicionando:
                             </p>
                             <div class="space-y-2 mb-4">
                                 <div class="flex items-start gap-2">
-                                    <span class="text-green-300 text-lg">✓</span>
-                                    <span class="text-green-100 text-sm"><strong>200+ vitaminas e nutrientes</strong> (A, C, E, B12)</span>
+                                    <span class="text-green-300 text-base md:text-lg">✓</span>
+                                    <span class="text-green-100 text-xs md:text-sm"><strong>200+ vitaminas e nutrientes</strong> (A, C, E, B12)</span>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <span class="text-green-300 text-lg">✓</span>
-                                    <span class="text-green-100 text-sm"><strong>Polissacarídeos</strong> de hidratação profunda</span>
+                                    <span class="text-green-300 text-base md:text-lg">✓</span>
+                                    <span class="text-green-100 text-xs md:text-sm"><strong>Polissacarídeos</strong> de hidratação profunda</span>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <span class="text-green-300 text-lg">✓</span>
-                                    <span class="text-green-100 text-sm"><strong>20 aminoácidos</strong> essenciais</span>
+                                    <span class="text-green-300 text-base md:text-lg">✓</span>
+                                    <span class="text-green-100 text-xs md:text-sm"><strong>20 aminoácidos</strong> essenciais</span>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <span class="text-green-300 text-lg">✓</span>
-                                    <span class="text-green-100 text-sm"><strong>Enzimas ativas</strong> regeneradoras</span>
+                                    <span class="text-green-300 text-base md:text-lg">✓</span>
+                                    <span class="text-green-100 text-xs md:text-sm"><strong>Enzimas ativas</strong> regeneradoras</span>
+                                </div>
+                            </div>
+
+                            <!-- Benefícios Adicionais Específicos -->
+                            <div class="bg-green-900/40 p-3 md:p-4 rounded-xl border-2 border-green-400/30">
+                                <h4 class="text-yellow-300 font-black text-sm md:text-base mb-2 text-center">💪 BENEFÍCIOS ADICIONAIS DO SHAMPOO:</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Controle total de oleosidade do couro cabeludo</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Redução de 70% da caspa em 3 semanas</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Estimula circulação e crescimento capilar</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">pH equilibrado para limpeza sem ressecamento</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-4 rounded-xl text-center">
-                            <p class="text-gray-900 font-black">
+                        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-3 md:p-4 rounded-xl text-center">
+                            <p class="text-gray-900 font-black text-sm md:text-base">
                                 💰 Economia: R$ 80-150 em shampoo profissional!
                             </p>
                         </div>
@@ -1859,21 +1727,21 @@
                 <!-- CARD 2: CONDICIONADOR TURBINADO -->
                 <div class="group relative">
                     <div class="absolute inset-0 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
-                    <div class="relative bg-gradient-to-br from-emerald-700 to-teal-800 p-8 rounded-3xl border-4 border-emerald-500 hover:scale-105 transition duration-300">
+                    <div class="relative bg-gradient-to-br from-emerald-700 to-teal-800 p-6 md:p-8 rounded-3xl border-4 border-emerald-500 hover:scale-105 transition duration-300">
                         <!-- Badge Premium -->
-                        <div class="absolute -top-4 -right-4 bg-yellow-400 text-gray-900 w-20 h-20 rounded-full flex items-center justify-center font-black text-2xl shadow-2xl animate-pulse border-4 border-yellow-300">
+                        <div class="absolute -top-3 -right-3 md:-top-4 md:-right-4 bg-yellow-400 text-gray-900 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center font-black text-xl md:text-2xl shadow-2xl animate-pulse border-4 border-yellow-300">
                             🧪
                         </div>
                         
-                        <div class="flex items-start gap-6 mb-6">
-                            <div class="flex-shrink-0 w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl">
-                                <span class="text-5xl">💆‍♀️</span>
+                        <div class="flex flex-col sm:flex-row items-start gap-4 md:gap-6 mb-6">
+                            <div class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl mx-auto sm:mx-0">
+                                <span class="text-4xl md:text-5xl">💆‍♀️</span>
                             </div>
-                            <div>
+                            <div class="text-center sm:text-left">
                                 <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full inline-block mb-3">
-                                    <span class="text-white font-black text-sm">FÓRMULA #2</span>
+                                    <span class="text-white font-black text-xs md:text-sm">FÓRMULA #2</span>
                                 </div>
-                                <h3 class="text-3xl font-black text-white mb-2">
+                                <h3 class="text-2xl md:text-3xl font-black text-white mb-2">
                                     Condicionador + Babosa
                                 </h3>
                                 <p class="text-emerald-200 text-sm font-bold">
@@ -1882,37 +1750,67 @@
                             </div>
                         </div>
 
-                        <div class="bg-white/20 backdrop-blur-sm p-6 rounded-2xl border-2 border-white/30 mb-4">
+                        <!-- Nova Função do Produto -->
+                        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-4 rounded-xl mb-4">
+                            <p class="text-gray-900 font-black text-sm md:text-base text-center">
+                                🎯 NOVA FUNÇÃO: Hidratação + Reparação Profunda das Fibras
+                            </p>
+                        </div>
+
+                        <div class="bg-white/20 backdrop-blur-sm p-4 md:p-6 rounded-2xl border-2 border-white/30 mb-4">
                             <div class="bg-emerald-600 px-4 py-2 rounded-lg mb-4 text-center">
-                                <p class="text-white font-black text-lg">
+                                <p class="text-white font-black text-base md:text-lg">
                                     📊 ADICIONE ATÉ 20% DE GEL PURO
                                 </p>
                             </div>
-                            <p class="text-white text-base leading-relaxed mb-4">
+                            <p class="text-white text-sm md:text-base leading-relaxed mb-4">
                                 Você criará o <strong>condicionador mais concentrado do mercado</strong>, potencializando os benefícios do produto original + adicionando:
                             </p>
                             <div class="space-y-2 mb-4">
                                 <div class="flex items-start gap-2">
-                                    <span class="text-emerald-300 text-lg">✓</span>
-                                    <span class="text-emerald-100 text-sm"><strong>200+ vitaminas e nutrientes</strong> (A, C, E, B12)</span>
+                                    <span class="text-emerald-300 text-base md:text-lg">✓</span>
+                                    <span class="text-emerald-100 text-xs md:text-sm"><strong>200+ vitaminas e nutrientes</strong> (A, C, E, B12)</span>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <span class="text-emerald-300 text-lg">✓</span>
-                                    <span class="text-emerald-100 text-sm"><strong>Polissacarídeos</strong> de hidratação profunda</span>
+                                    <span class="text-emerald-300 text-base md:text-lg">✓</span>
+                                    <span class="text-emerald-100 text-xs md:text-sm"><strong>Polissacarídeos</strong> de hidratação profunda</span>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <span class="text-emerald-300 text-lg">✓</span>
-                                    <span class="text-emerald-100 text-sm"><strong>20 aminoácidos</strong> essenciais</span>
+                                    <span class="text-emerald-300 text-base md:text-lg">✓</span>
+                                    <span class="text-emerald-100 text-xs md:text-sm"><strong>20 aminoácidos</strong> essenciais</span>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <span class="text-emerald-300 text-lg">✓</span>
-                                    <span class="text-emerald-100 text-sm"><strong>Enzimas ativas</strong> regeneradoras</span>
+                                    <span class="text-emerald-300 text-base md:text-lg">✓</span>
+                                    <span class="text-emerald-100 text-xs md:text-sm"><strong>Enzimas ativas</strong> regeneradoras</span>
+                                </div>
+                            </div>
+
+                            <!-- Benefícios Adicionais Específicos -->
+                            <div class="bg-emerald-900/40 p-3 md:p-4 rounded-xl border-2 border-emerald-400/30">
+                                <h4 class="text-yellow-300 font-black text-sm md:text-base mb-2 text-center">💪 BENEFÍCIOS ADICIONAIS DO CONDICIONADOR:</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Selamento das cutículas para brilho intenso</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Desembaraço instantâneo sem quebrar fios</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Proteção térmica contra secador e chapinha</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Maciez e elasticidade dos fios recuperadas</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-4 rounded-xl text-center">
-                            <p class="text-gray-900 font-black">
+                        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-3 md:p-4 rounded-xl text-center">
+                            <p class="text-gray-900 font-black text-sm md:text-base">
                                 💰 Economia: R$ 120-200 em tratamento de salão!
                             </p>
                         </div>
@@ -1922,21 +1820,21 @@
                 <!-- CARD 3: CREME FACIAL TURBINADO -->
                 <div class="group relative">
                     <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-lime-600 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
-                    <div class="relative bg-gradient-to-br from-green-800 to-lime-900 p-8 rounded-3xl border-4 border-green-500 hover:scale-105 transition duration-300">
+                    <div class="relative bg-gradient-to-br from-green-800 to-lime-900 p-6 md:p-8 rounded-3xl border-4 border-green-500 hover:scale-105 transition duration-300">
                         <!-- Badge Premium -->
-                        <div class="absolute -top-4 -right-4 bg-yellow-400 text-gray-900 w-20 h-20 rounded-full flex items-center justify-center font-black text-2xl shadow-2xl animate-pulse border-4 border-yellow-300">
+                        <div class="absolute -top-3 -right-3 md:-top-4 md:-right-4 bg-yellow-400 text-gray-900 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center font-black text-xl md:text-2xl shadow-2xl animate-pulse border-4 border-yellow-300">
                             🧪
                         </div>
                         
-                        <div class="flex items-start gap-6 mb-6">
-                            <div class="flex-shrink-0 w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl">
-                                <span class="text-5xl">✨</span>
+                        <div class="flex flex-col sm:flex-row items-start gap-4 md:gap-6 mb-6">
+                            <div class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl mx-auto sm:mx-0">
+                                <span class="text-4xl md:text-5xl">✨</span>
                             </div>
-                            <div>
+                            <div class="text-center sm:text-left">
                                 <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full inline-block mb-3">
-                                    <span class="text-white font-black text-sm">FÓRMULA #3</span>
+                                    <span class="text-white font-black text-xs md:text-sm">FÓRMULA #3</span>
                                 </div>
-                                <h3 class="text-3xl font-black text-white mb-2">
+                                <h3 class="text-2xl md:text-3xl font-black text-white mb-2">
                                     Creme Facial + Babosa
                                 </h3>
                                 <p class="text-green-200 text-sm font-bold">
@@ -1945,37 +1843,67 @@
                             </div>
                         </div>
 
-                        <div class="bg-white/20 backdrop-blur-sm p-6 rounded-2xl border-2 border-white/30 mb-4">
+                        <!-- Nova Função do Produto -->
+                        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-4 rounded-xl mb-4">
+                            <p class="text-gray-900 font-black text-sm md:text-base text-center">
+                                🎯 NOVA FUNÇÃO: Anti-idade + Clareamento de Manchas
+                            </p>
+                        </div>
+
+                        <div class="bg-white/20 backdrop-blur-sm p-4 md:p-6 rounded-2xl border-2 border-white/30 mb-4">
                             <div class="bg-green-600 px-4 py-2 rounded-lg mb-4 text-center">
-                                <p class="text-white font-black text-lg">
+                                <p class="text-white font-black text-base md:text-lg">
                                     📊 ADICIONE ATÉ 20% DE GEL PURO
                                 </p>
                             </div>
-                            <p class="text-white text-base leading-relaxed mb-4">
+                            <p class="text-white text-sm md:text-base leading-relaxed mb-4">
                                 Você criará o <strong>creme facial mais concentrado do mercado</strong>, potencializando os benefícios do produto original + adicionando:
                             </p>
                             <div class="space-y-2 mb-4">
                                 <div class="flex items-start gap-2">
-                                    <span class="text-green-300 text-lg">✓</span>
-                                    <span class="text-green-100 text-sm"><strong>200+ vitaminas e nutrientes</strong> (A, C, E, B12)</span>
+                                    <span class="text-green-300 text-base md:text-lg">✓</span>
+                                    <span class="text-green-100 text-xs md:text-sm"><strong>200+ vitaminas e nutrientes</strong> (A, C, E, B12)</span>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <span class="text-green-300 text-lg">✓</span>
-                                    <span class="text-green-100 text-sm"><strong>Polissacarídeos</strong> de hidratação profunda</span>
+                                    <span class="text-green-300 text-base md:text-lg">✓</span>
+                                    <span class="text-green-100 text-xs md:text-sm"><strong>Polissacarídeos</strong> de hidratação profunda</span>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <span class="text-green-300 text-lg">✓</span>
-                                    <span class="text-green-100 text-sm"><strong>20 aminoácidos</strong> essenciais</span>
+                                    <span class="text-green-300 text-base md:text-lg">✓</span>
+                                    <span class="text-green-100 text-xs md:text-sm"><strong>20 aminoácidos</strong> essenciais</span>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <span class="text-green-300 text-lg">✓</span>
-                                    <span class="text-green-100 text-sm"><strong>Enzimas ativas</strong> regeneradoras</span>
+                                    <span class="text-green-300 text-base md:text-lg">✓</span>
+                                    <span class="text-green-100 text-xs md:text-sm"><strong>Enzimas ativas</strong> regeneradoras</span>
+                                </div>
+                            </div>
+
+                            <!-- Benefícios Adicionais Específicos -->
+                            <div class="bg-green-900/40 p-3 md:p-4 rounded-xl border-2 border-green-400/30">
+                                <h4 class="text-yellow-300 font-black text-sm md:text-base mb-2 text-center">💪 BENEFÍCIOS ADICIONAIS DO CREME FACIAL:</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Auxílio no clareamento de manchas e melasma</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Redução visível de linhas de expressão</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Uniformização do tom da pele em 3 semanas</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Efeito calmante para peles sensíveis e irritadas</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-4 rounded-xl text-center">
-                            <p class="text-gray-900 font-black">
+                        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-3 md:p-4 rounded-xl text-center">
+                            <p class="text-gray-900 font-black text-sm md:text-base">
                                 💰 Economia: R$ 200-400 em sérum anti-idade!
                             </p>
                         </div>
@@ -1985,21 +1913,21 @@
                 <!-- CARD 4: HIDRATANTE CORPORAL TURBINADO -->
                 <div class="group relative">
                     <div class="absolute inset-0 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
-                    <div class="relative bg-gradient-to-br from-teal-700 to-cyan-900 p-8 rounded-3xl border-4 border-teal-500 hover:scale-105 transition duration-300">
+                    <div class="relative bg-gradient-to-br from-teal-700 to-cyan-900 p-6 md:p-8 rounded-3xl border-4 border-teal-500 hover:scale-105 transition duration-300">
                         <!-- Badge Premium -->
-                        <div class="absolute -top-4 -right-4 bg-yellow-400 text-gray-900 w-20 h-20 rounded-full flex items-center justify-center font-black text-2xl shadow-2xl animate-pulse border-4 border-yellow-300">
+                        <div class="absolute -top-3 -right-3 md:-top-4 md:-right-4 bg-yellow-400 text-gray-900 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center font-black text-xl md:text-2xl shadow-2xl animate-pulse border-4 border-yellow-300">
                             🧪
                         </div>
                         
-                        <div class="flex items-start gap-6 mb-6">
-                            <div class="flex-shrink-0 w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl">
-                                <span class="text-5xl">🧴</span>
+                        <div class="flex flex-col sm:flex-row items-start gap-4 md:gap-6 mb-6">
+                            <div class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl mx-auto sm:mx-0">
+                                <span class="text-4xl md:text-5xl">🧴</span>
                             </div>
-                            <div>
+                            <div class="text-center sm:text-left">
                                 <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full inline-block mb-3">
-                                    <span class="text-white font-black text-sm">FÓRMULA #4</span>
+                                    <span class="text-white font-black text-xs md:text-sm">FÓRMULA #4</span>
                                 </div>
-                                <h3 class="text-3xl font-black text-white mb-2">
+                                <h3 class="text-2xl md:text-3xl font-black text-white mb-2">
                                     Hidratante + Babosa
                                 </h3>
                                 <p class="text-teal-200 text-sm font-bold">
@@ -2008,37 +1936,67 @@
                             </div>
                         </div>
 
-                        <div class="bg-white/20 backdrop-blur-sm p-6 rounded-2xl border-2 border-white/30 mb-4">
+                        <!-- Nova Função do Produto -->
+                        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-4 rounded-xl mb-4">
+                            <p class="text-gray-900 font-black text-sm md:text-base text-center">
+                                🎯 NOVA FUNÇÃO: Nutrição Profunda + Firmeza da Pele
+                            </p>
+                        </div>
+
+                        <div class="bg-white/20 backdrop-blur-sm p-4 md:p-6 rounded-2xl border-2 border-white/30 mb-4">
                             <div class="bg-teal-600 px-4 py-2 rounded-lg mb-4 text-center">
-                                <p class="text-white font-black text-lg">
+                                <p class="text-white font-black text-base md:text-lg">
                                     📊 ADICIONE ATÉ 20% DE GEL PURO
                                 </p>
                             </div>
-                            <p class="text-white text-base leading-relaxed mb-4">
+                            <p class="text-white text-sm md:text-base leading-relaxed mb-4">
                                 Você criará o <strong>hidratante corporal mais concentrado do mercado</strong>, potencializando os benefícios do produto original + adicionando:
                             </p>
                             <div class="space-y-2 mb-4">
                                 <div class="flex items-start gap-2">
-                                    <span class="text-teal-300 text-lg">✓</span>
-                                    <span class="text-teal-100 text-sm"><strong>200+ vitaminas e nutrientes</strong> (A, C, E, B12)</span>
+                                    <span class="text-teal-300 text-base md:text-lg">✓</span>
+                                    <span class="text-teal-100 text-xs md:text-sm"><strong>200+ vitaminas e nutrientes</strong> (A, C, E, B12)</span>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <span class="text-teal-300 text-lg">✓</span>
-                                    <span class="text-teal-100 text-sm"><strong>Polissacarídeos</strong> de hidratação profunda</span>
+                                    <span class="text-teal-300 text-base md:text-lg">✓</span>
+                                    <span class="text-teal-100 text-xs md:text-sm"><strong>Polissacarídeos</strong> de hidratação profunda</span>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <span class="text-teal-300 text-lg">✓</span>
-                                    <span class="text-teal-100 text-sm"><strong>20 aminoácidos</strong> essenciais</span>
+                                    <span class="text-teal-300 text-base md:text-lg">✓</span>
+                                    <span class="text-teal-100 text-xs md:text-sm"><strong>20 aminoácidos</strong> essenciais</span>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <span class="text-teal-300 text-lg">✓</span>
-                                    <span class="text-teal-100 text-sm"><strong>Enzimas ativas</strong> regeneradoras</span>
+                                    <span class="text-teal-300 text-base md:text-lg">✓</span>
+                                    <span class="text-teal-100 text-xs md:text-sm"><strong>Enzimas ativas</strong> regeneradoras</span>
+                                </div>
+                            </div>
+
+                            <!-- Benefícios Adicionais Específicos -->
+                            <div class="bg-teal-900/40 p-3 md:p-4 rounded-xl border-2 border-teal-400/30">
+                                <h4 class="text-yellow-300 font-black text-sm md:text-base mb-2 text-center">💪 BENEFÍCIOS ADICIONAIS DO HIDRATANTE:</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Hidratação de 24h com apenas uma aplicação</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Melhora da firmeza e elasticidade da pele</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Auxílio na cicatrização e regeneração celular</span>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="text-yellow-300 text-base">✨</span>
+                                        <span class="text-white text-xs md:text-sm">Absorção rápida sem deixar a pele oleosa</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-4 rounded-xl text-center">
-                            <p class="text-gray-900 font-black">
+                        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-3 md:p-4 rounded-xl text-center">
+                            <p class="text-gray-900 font-black text-sm md:text-base">
                                 💰 Economia: R$ 150-280 em loção premium!
                             </p>
                         </div>
@@ -2046,62 +2004,20 @@
                 </div>
             </div>
 
-            <!-- Box Central: E-book -->
-            <div class="max-w-5xl mx-auto">
-                <div class="relative group">
-                    <div class="absolute inset-0 bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition"></div>
-                    <div class="relative bg-gradient-to-br from-green-700 via-emerald-700 to-green-800 p-12 rounded-3xl border-4 border-green-400 shadow-2xl">
-                        <div class="text-center">
-                            <div class="inline-block bg-yellow-400 px-8 py-4 rounded-full mb-6 border-4 border-yellow-300">
-                                <span class="text-gray-900 font-black text-xl">🎁 BÔNUS EXCLUSIVO GRÁTIS</span>
-                            </div>
-                            
-                            <h3 class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
-                                📖 E-book Completo:<br>
-                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-300">50+ Receitas de Transformação!</span>
-                            </h3>
-                            
-                            <div class="grid md:grid-cols-3 gap-6 mb-8">
-                                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border-2 border-green-400/30 hover:bg-white/20 transition">
-                                    <div class="text-4xl mb-3">🧪</div>
-                                    <h4 class="text-white font-black text-lg mb-2">Fórmulas Premium</h4>
-                                    <p class="text-green-100 text-sm">20 receitas para turbinar shampoo, condicionador, cremes com até 20% de gel</p>
-                                </div>
-                                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border-2 border-emerald-400/30 hover:bg-white/20 transition">
-                                    <div class="text-4xl mb-3">🌿</div>
-                                    <h4 class="text-white font-black text-lg mb-2">Receitas Naturais</h4>
-                                    <p class="text-green-100 text-sm">15 máscaras e tratamentos 100% puros com ingredientes naturais</p>
-                                </div>
-                                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border-2 border-teal-400/30 hover:bg-white/20 transition">
-                                    <div class="text-4xl mb-3">🥤</div>
-                                    <h4 class="text-white font-black text-lg mb-2">Sucos Detox</h4>
-                                    <p class="text-green-100 text-sm">15 receitas energizantes para saúde e bem-estar interno</p>
-                                </div>
-                            </div>
-
-                            <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-8 rounded-2xl mb-8 border-4 border-yellow-300">
-                                <p class="text-gray-900 text-xl font-black mb-3">
-                                    💰 ECONOMIA TOTAL POTENCIAL COM AS FÓRMULAS:
-                                </p>
-                                <p class="text-white text-6xl font-black mb-3 drop-shadow-lg">
-                                    R$ 1.500/MÊS
-                                </p>
-                                <p class="text-gray-900 font-bold text-base">
-                                    ✓ Criando produtos ultra concentrados<br>
-                                    ✓ Economizando em salão e tratamentos<br>
-                                    ✓ Multiplicando o valor do seu kit
-                                </p>
-                            </div>
-
-                            <a href="#comprar" class="inline-block bg-white text-green-700 px-16 py-6 rounded-full font-black text-2xl shadow-2xl hover:scale-105 hover:bg-yellow-300 hover:text-gray-900 transition duration-300 border-4 border-green-400 mb-6">
-                                🌿 QUERO MEU KIT + E-BOOK GRÁTIS!
-                            </a>
-                            
-                            <p class="text-green-200 text-lg">
-                                ⭐⭐⭐⭐⭐ Mais de <strong class="text-yellow-300">2.847 pessoas</strong> já estão transformando seus produtos!
-                            </p>
-                        </div>
-                    </div>
+            <!-- CTA Final Seção -->
+            <div class="text-center mt-12 max-w-4xl mx-auto px-4">
+                <a href="#comprar" class="inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 md:px-16 py-5 md:py-6 rounded-full font-black text-xl md:text-2xl shadow-2xl hover:scale-105 transition duration-300 border-4 border-green-400">
+                    🌿 Quero Criar Meus Produtos Premium!
+                </a>
+                
+                <p class="text-green-200 text-lg md:text-xl mt-6">
+                    ⭐⭐⭐⭐⭐ Mais de <strong class="text-yellow-300">2.847 pessoas</strong> já estão transformando seus produtos!
+                </p>
+                
+                <div class="mt-8 bg-white/10 backdrop-blur-sm p-6 rounded-2xl border-2 border-green-400/30">
+                    <p class="text-white text-base md:text-lg leading-relaxed">
+                        💰 <strong class="text-yellow-300">Economia potencial mensal:</strong> Até R$ 1.500 criando produtos ultra concentrados e economizando em tratamentos profissionais
+                    </p>
                 </div>
             </div>
 
@@ -2623,11 +2539,10 @@
                 </div>
                 
                 <h2 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
-                    <span class="text-white">Promessa</span>
+                    <span class="text-white">Selo de Garantia</span>
                     <span class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400">
-                        DIAMOND
+                        VIVALOE
                     </span>
-                    <span class="text-white">VIVALOE</span>
                 </h2>
                 
                 <p class="text-2xl text-gray-300 font-bold max-w-3xl mx-auto leading-relaxed">
@@ -2724,7 +2639,7 @@
                     <div class="relative bg-gradient-to-br from-gray-800 via-gray-900 to-black p-12 rounded-3xl border-2 border-yellow-400/50 shadow-2xl">
                         <div class="text-center mb-12">
                             <div class="inline-block bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400 text-gray-900 px-8 py-4 rounded-full font-black text-xl shadow-2xl mb-6 border-2 border-yellow-300">
-                                💎 COMPROMISSO DIAMOND
+                                💎 COMPROMISSO VIVALOE
                             </div>
                             <h3 class="text-4xl md:text-5xl font-black text-white mb-4">
                                 Experiência Premium Garantida
@@ -3445,24 +3360,7 @@
                 </details>
             </div>
 
-            <!-- CTA Footer FAQ -->
-            <div class="mt-16 text-center max-w-3xl mx-auto">
-                <div class="bg-gradient-to-r from-green-600 to-emerald-600 p-10 rounded-3xl shadow-2xl">
-                    <h3 class="text-3xl font-black text-white mb-4">
-                        Ainda tem dúvidas?
-                    </h3>
-                    <p class="text-xl text-white/90 mb-6">
-                        Nosso time está pronto para te atender via WhatsApp!
-                    </p>
-                    <a href="https://wa.me/5511999999999" target="_blank" class="inline-flex items-center justify-center bg-white text-green-700 px-8 py-4 rounded-full font-black text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition gap-3">
-                        <span class="text-2xl">💬</span>
-                        Falar com Especialista VIVALOE
-                    </a>
-                    <p class="text-sm text-white/80 mt-4">
-                        Tempo médio de resposta: menos de 2 minutos
-                    </p>
-                </div>
-            </div>
+
         </div>
     </section>
 
@@ -3577,10 +3475,10 @@
                                         </div>
                                     </li>
                                     <li class="flex items-start gap-4 bg-green-50 p-4 rounded-xl">
-                                        <span class="text-green-600 text-3xl flex-shrink-0">🎁</span>
+                                        <span class="text-green-600 text-3xl flex-shrink-0">📦</span>
                                         <div>
-                                            <div class="font-bold text-gray-900 text-lg">E-book Premium GRÁTIS</div>
-                                            <div class="text-gray-600 text-sm">20+ receitas para cabelo, pele e saúde</div>
+                                            <div class="font-bold text-gray-900 text-lg">Amazon Prime - TODO BRASIL</div>
+                                            <div class="text-gray-600 text-sm">Entrega rápida, rastreável e segura em todo país</div>
                                         </div>
                                     </li>
                                 </ul>
@@ -3598,8 +3496,8 @@
                                         <span class="font-semibold">Compra Segura</span>
                                     </div>
                                     <div class="flex items-center gap-2">
-                                        <span>🚚</span>
-                                        <span class="font-semibold">Entrega Rápida</span>
+                                        <span>📦</span>
+                                        <span class="font-semibold">Amazon Prime</span>
                                     </div>
                                     <div class="flex items-center gap-2">
                                         <span>✓</span>
@@ -3624,73 +3522,135 @@
         </div>
     </section>
 
-    <!-- 14. FOOTER -->
-    <footer class="bg-gray-900 text-white py-12">
+    <!-- 14. FOOTER PROFISSIONAL - GOOGLE SHOPPING COMPATIBLE -->
+    <footer class="bg-gray-900 text-white">
         <div class="container mx-auto px-4">
-            <div class="text-center">
-                <div class="text-3xl font-black mb-4">VIVALOE</div>
-                <p class="text-gray-400 mb-6">Babosa fresca premium, direto da fazenda para você.</p>
-                
-                <!-- Disclaimer Legal em Accordion -->
-                <div class="max-w-4xl mx-auto mb-6">
-                    <details class="bg-gray-800 rounded-2xl border border-gray-700 group">
-                        <summary class="font-bold text-base text-white cursor-pointer list-none p-6 flex items-center justify-between hover:bg-gray-750 transition">
-                            <div class="flex items-center gap-3">
-                                <svg class="w-6 h-6 text-yellow-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                </svg>
-                                <span>⚠️ IMPORTANTE - Avisos Legais e Informações (Clique para ler)</span>
+            
+            <!-- Footer Principal -->
+            <div class="py-12 border-b border-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Coluna 1: Sobre a Empresa -->
+                    <div>
+                        <div class="text-2xl font-black text-green-400 mb-4">VIVALOE</div>
+                        <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                            Babosa fresca premium, 100% orgânica, direto da fazenda para você. Colhida no dia do envio para máxima potência.
+                        </p>
+                        <div class="flex gap-3">
+                            <a href="https://www.instagram.com/vivaloe" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center transition">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </a>
+                            <a href="https://wa.me/5511999999999" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center transition">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Coluna 2: Institucional -->
+                    <div>
+                        <h3 class="text-lg font-black text-white mb-4">Institucional</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#sobre" class="text-gray-400 hover:text-green-400 transition">Sobre Nós</a></li>
+                            <li><a href="#produto" class="text-gray-400 hover:text-green-400 transition">Nosso Produto</a></li>
+                            <li><a href="#depoimentos" class="text-gray-400 hover:text-green-400 transition">Depoimentos</a></li>
+                            <li><a href="#faq" class="text-gray-400 hover:text-green-400 transition">Perguntas Frequentes</a></li>
+                            <li><a href="#contato" class="text-gray-400 hover:text-green-400 transition">Entre em Contato</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Coluna 3: Políticas -->
+                    <div>
+                        <h3 class="text-lg font-black text-white mb-4">Políticas</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#politica-privacidade" class="text-gray-400 hover:text-green-400 transition">Política de Privacidade</a></li>
+                            <li><a href="#termos-uso" class="text-gray-400 hover:text-green-400 transition">Termos de Uso</a></li>
+                            <li><a href="#politica-troca" class="text-gray-400 hover:text-green-400 transition">Política de Troca e Devolução</a></li>
+                            <li><a href="#politica-entrega" class="text-gray-400 hover:text-green-400 transition">Política de Entrega</a></li>
+                            <li><a href="#garantia" class="text-gray-400 hover:text-green-400 transition">Garantia</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Coluna 4: Atendimento -->
+                    <div>
+                        <h3 class="text-lg font-black text-white mb-4">Atendimento</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                <div>
+                                    <div class="text-gray-400">Email</div>
+                                    <a href="mailto:contato@vivaloe.com.br" class="text-white hover:text-green-400 transition">contato@vivaloe.com.br</a>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                <div>
+                                    <div class="text-gray-400">WhatsApp</div>
+                                    <a href="https://wa.me/5511999999999" class="text-white hover:text-green-400 transition">(11) 99999-9999</a>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <div>
+                                    <div class="text-gray-400">Horário de Atendimento</div>
+                                    <div class="text-white">Seg-Sex: 9h-18h</div>
+                                    <div class="text-white">Sáb: 9h-13h</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Selos e Garantias -->
+            <div class="py-8 border-b border-gray-800">
+                <div class="flex flex-wrap items-center justify-center gap-8 text-sm">
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        <span class="font-semibold">Compra 100% Segura</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+                        <span class="font-semibold">Amazon Prime Todo Brasil</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span class="font-semibold">Garantia de 7 Dias</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span class="font-semibold">Pagamento Seguro</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Informações Legais -->
+            <div class="py-8 border-b border-gray-800">
+                <div class="max-w-5xl mx-auto">
+                    <details class="bg-gray-800 rounded-xl border border-gray-700 group">
+                        <summary class="font-bold text-sm text-white cursor-pointer list-none p-4 flex items-center justify-between hover:bg-gray-750 transition">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                                <span>Avisos Legais e Informações Importantes</span>
                             </div>
                             <span class="text-yellow-400 group-open:rotate-180 transition-transform">▼</span>
                         </summary>
-                        <div class="px-6 pb-6 text-left">
-                            <div class="text-gray-300 text-sm space-y-4">
-                                <div class="bg-gray-900 p-4 rounded-xl">
-                                    <p class="font-bold text-yellow-400 mb-2">⚠️ Produto Natural</p>
-                                    <p>Este é um produto 100% natural (Aloe Vera fresca). Não é medicamento e não se destina a diagnosticar, tratar, curar ou prevenir doenças.</p>
-                                </div>
-                                
-                                <div class="bg-gray-900 p-4 rounded-xl">
-                                    <p class="font-bold text-yellow-400 mb-2">📊 Resultados Individuais</p>
-                                    <p>Os resultados podem variar significativamente de pessoa para pessoa, dependendo de fatores como tipo de cabelo, pele, frequência de uso, genética e estilo de vida.</p>
-                                </div>
-                                
-                                <div class="bg-gray-900 p-4 rounded-xl">
-                                    <p class="font-bold text-yellow-400 mb-2">🖼️ Imagens Ilustrativas</p>
-                                    <p>As imagens de antes e depois apresentadas são ilustrativas e representam resultados obtidos por alguns usuários. Não garantimos que todos alcançarão os mesmos resultados.</p>
-                                </div>
-                                
-                                <div class="bg-gray-900 p-4 rounded-xl">
-                                    <p class="font-bold text-yellow-400 mb-2">⏰ Tempo de Resultados</p>
-                                    <p>Os períodos mencionados (3 semanas, 30 dias, 45 dias) são estimativas baseadas em relatos de clientes. O tempo real para notar melhorias varia individualmente.</p>
-                                </div>
-                                
-                                <div class="bg-gray-900 p-4 rounded-xl">
-                                    <p class="font-bold text-yellow-400 mb-2">🩺 Consulta Médica</p>
-                                    <p>Em caso de condições de pele, couro cabeludo ou problemas de saúde pré-existentes, consulte um dermatologista ou médico antes de usar.</p>
-                                </div>
-                                
-                                <div class="bg-gray-900 p-4 rounded-xl">
-                                    <p class="font-bold text-yellow-400 mb-2">🧪 Teste de Alergia</p>
-                                    <p>Recomendamos fazer teste de alergia em pequena área da pele antes do uso completo.</p>
-                                </div>
-                                
-                                <div class="bg-gray-900 p-4 rounded-xl border-t-2 border-yellow-400/30 mt-4">
-                                    <p class="text-xs text-gray-400">
-                                        Os depoimentos apresentados são relatos reais de clientes, mas representam experiências individuais. A VIVALOE não se responsabiliza por expectativas não atendidas relacionadas a resultados específicos. Use sempre conforme orientações fornecidas no e-book gratuito.
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="p-4 text-xs text-gray-400 space-y-3">
+                            <p><strong class="text-gray-300">Produto Natural:</strong> Este é um produto 100% natural (Aloe Vera fresca). Não é medicamento e não se destina a diagnosticar, tratar, curar ou prevenir doenças.</p>
+                            <p><strong class="text-gray-300">Resultados Individuais:</strong> Os resultados podem variar de pessoa para pessoa.</p>
+                            <p><strong class="text-gray-300">Teste de Alergia:</strong> Recomendamos fazer teste em pequena área antes do uso completo.</p>
                         </div>
                     </details>
                 </div>
-
-                <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
-                    <p>&copy; 2025 VIVALOE. Todos os direitos reservados.</p>
-                    <p class="mt-2 text-xs">
-                        CNPJ: 00.000.000/0001-00 | SAC: contato@vivaloe.com.br
-                    </p>
+            </div>
+            
+            <!-- Copyright e Dados da Empresa -->
+            <div class="py-6 text-center text-sm text-gray-400">
+                <div class="mb-3">
+                    <p class="font-semibold text-white mb-1">VIVALOE - Aloe Vera Premium</p>
+                    <p>CNPJ: 00.000.000/0001-00</p>
+                    <p>Endereço: Rua Exemplo, 123 - Bairro - Cidade/SP - CEP: 00000-000</p>
                 </div>
+                <p>&copy; 2025 VIVALOE. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -3858,6 +3818,104 @@
                 }
             });
         });
+
+        // ===========================================
+        // LAZY LOADING OTIMIZADO - INTERSECTION OBSERVER
+        // ===========================================
+        
+        // Configuração do Intersection Observer para lazy loading
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    
+                    // Carrega a imagem
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                    
+                    // Adiciona classe de fade-in quando carregar
+                    img.addEventListener('load', () => {
+                        img.classList.add('loaded');
+                    });
+                    
+                    // Para de observar essa imagem
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            root: null,
+            rootMargin: '50px', // Começa a carregar 50px antes de aparecer
+            threshold: 0.01
+        });
+        
+        // Aplica lazy loading automaticamente em TODAS as imagens
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona todas as imagens
+            const allImages = document.querySelectorAll('img');
+            
+            allImages.forEach((img, index) => {
+                // Primeiras 3 imagens (acima da dobra) = eager loading
+                if (index < 3) {
+                    img.loading = 'eager';
+                    if (index === 0) {
+                        img.fetchpriority = 'high';
+                    }
+                } else {
+                    // Resto = lazy loading
+                    img.loading = 'lazy';
+                    imageObserver.observe(img);
+                }
+                
+                // Adiciona dimensões se não tiver (evita layout shift)
+                if (!img.width && !img.style.width) {
+                    const parent = img.parentElement;
+                    if (parent) {
+                        img.style.width = '100%';
+                        img.style.height = 'auto';
+                    }
+                }
+            });
+        });
+        
+        // ===========================================
+        // OTIMIZAÇÃO DE PERFORMANCE GERAL
+        // ===========================================
+        
+        // Debounce para eventos de scroll/resize
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // Otimiza eventos de scroll
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+        
+        // Preload de imagens críticas acima da dobra (hero section)
+        const criticalImages = document.querySelectorAll('.hero-section img, section:first-of-type img');
+        criticalImages.forEach(img => {
+            if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            }
+        });
+        
     </script>
 <script src="protect.js"></script>
 </body>
