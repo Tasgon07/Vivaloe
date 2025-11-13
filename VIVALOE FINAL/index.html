@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- 
+    ⚡ OTIMIZAÇÕES DE SERVIDOR NECESSÁRIAS:
+    Crie um arquivo _headers na raiz do Netlify com:
+    /*
+      Cache-Control: public, max-age=31536000, immutable
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: DENY
+      Content-Encoding: gzip
+    -->
+    
     <title>Kit 3 Folhas Babosa Fresca 42% OFF | VIVALOE</title>
     <meta name="description" content="Babosa fresca premium direto da fazenda. 42% OFF + Frete Amazon Prime TODO BRASIL. 900-1200ml gel puro. Cabelo, pele e saúde transformados!">
     
@@ -29,9 +40,6 @@
        PROTEÇÃO ANTI-PLÁGIO VIVALOE
        =========================================== -->
     <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <!-- ===========================================
@@ -72,10 +80,19 @@
             opacity: 1;
         }
         
-        /* Otimização de renderização */
+        /* Otimização agressiva de imagens */
         img {
             content-visibility: auto;
             contain-intrinsic-size: 500px;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        
+        /* Compressão via CSS */
+        img:not([src*="logo"]):not([src*="icon"]) {
+            filter: contrast(1.05) brightness(1.02);
+            transform: translateZ(0);
+            backface-visibility: hidden;
         }
         
         /* Will-change para animações */
@@ -98,6 +115,17 @@
         .instagram-media[loading="lazy"] {
             content-visibility: auto;
             contain-intrinsic-size: 500px 800px;
+        }
+        
+        /* Otimização CRÍTICA - Instagram Embeds */
+        .instagram-media {
+            will-change: transform;
+            transform: translateZ(0);
+        }
+        
+        /* Bloquear scripts desnecessários do Instagram até interação */
+        .instagram-media script {
+            loading: lazy;
         }
         
         /* ===========================================
