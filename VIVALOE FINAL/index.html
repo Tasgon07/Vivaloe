@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Kit 3 Folhas Babosa Fresca 42% OFF | VIVALOE</title>
     <meta name="description" content="Babosa fresca premium direto da fazenda. 42% OFF + Frete Amazon Prime TODO BRASIL. 900-1200ml gel puro. Cabelo, pele e saúde transformados!">
     
-    <!-- Preconnect para recursos externos -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Performance & SEO -->
+    <meta name="theme-color" content="#16a34a">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://www.vivaloe.com.br">
+    
+    <!-- Critical Resource Hints -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.instagram.com">
+    <link rel="dns-prefetch" href="https://platform.instagram.com">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
     
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    
+    <!-- Tailwind CSS - Carregamento Síncrono -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Display Swap (Mostra Conteúdo Imediatamente) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <!-- ===========================================
        PROTEÇÃO ANTI-PLÁGIO VIVALOE
@@ -30,59 +38,18 @@
        FIM DAS META TAGS DE PROTEÇÃO
        =========================================== -->
     <style>
-        /* ===========================================
-           PROTEÇÃO ANTI-PLÁGIO - CSS VIVALOE
-           =========================================== */
-        body, html, *, div, p, h1, h2, h3, h4, h5, h6, span, a, button, input, textarea {
-            user-select: none !important;
-            -webkit-user-select: none !important;
-            -moz-user-select: none !important;
-            -ms-user-select: none !important;
-            -o-user-select: none !important;
-        }
-
-        img, svg, picture, video {
-            pointer-events: none !important;
-            -webkit-user-drag: none !important;
-            -khtml-user-drag: none !important;
-            -moz-user-drag: none !important;
-            -o-user-drag: none !important;
-            user-drag: none !important;
-            -webkit-touch-callout: none !important;
-        }
-
-        *::-moz-selection {
-            background: transparent !important;
-            color: inherit !important;
-        }
-
-        *::selection {
-            background: transparent !important;
-            color: inherit !important;
-        }
-
-        body {
-            cursor: default !important;
-            -webkit-text-size-adjust: 100% !important;
-            -ms-text-size-adjust: 100% !important;
-        }
-        /* ===========================================
-           FIM DA PROTEÇÃO CSS
-           =========================================== */
-
-        /* Estilos originais do Hatch Canvas */
-        body { 
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-        #notificationPopup.show { transform: translateX(0); }
-
-        /* Resto dos seus estilos continua aqui embaixo */
-        body { 
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-        #notificationPopup.show { transform: translateX(0); }
+        /* Critical CSS - Above the Fold */
+        *{box-sizing:border-box;margin:0;padding:0}
+        html{-webkit-text-size-adjust:100%;line-height:1.5;visibility:visible!important;opacity:1!important}
+        body{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth;cursor:default!important;visibility:visible!important;opacity:1!important}
+        img,video{max-width:100%;height:auto;display:block}
+        a{text-decoration:none;color:inherit}
+        
+        /* Proteção Anti-Plágio */
+        body,html,*,div,p,h1,h2,h3,h4,h5,h6,span,a,button,input,textarea{user-select:none!important;-webkit-user-select:none!important;-moz-user-select:none!important}
+        img,svg,picture,video{pointer-events:none!important;-webkit-user-drag:none!important;-webkit-touch-callout:none!important}
+        *::selection,*::-moz-selection{background:transparent!important;color:inherit!important}
+        #notificationPopup.show{transform:translateX(0)}
         
         /* ===========================================
            OTIMIZAÇÕES DE PERFORMANCE - LAZY LOADING
@@ -143,6 +110,12 @@
             section {
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
+            }
+            
+            /* Reduzir espaço da seção hero no mobile */
+            #hero {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
             }
             
             /* Textos responsivos */
@@ -291,6 +264,46 @@
 
         }
         
+        /* Otimizações específicas para as FÓRMULAS no mobile */
+        @media (max-width: 640px) {
+            /* Ocultar badge premium animado (🧪) no canto */
+            .animate-pulse.border-4.border-yellow-300 {
+                display: none !important;
+            }
+            
+            /* Ocultar ícone grande (🧴, 💆‍♀️, ✨) */
+            .flex-shrink-0.w-16.h-16.bg-white.rounded-2xl,
+            .flex-shrink-0.w-20.h-20.bg-white.rounded-2xl {
+                display: none !important;
+            }
+            
+            /* Ocultar badge "FÓRMULA #1, #2, #3, #4" */
+            .bg-white\/20.backdrop-blur-sm.px-4.py-2.rounded-full {
+                display: none !important;
+            }
+            
+            /* Reduzir espaçamento superior dos cards */
+            .group.relative .relative.bg-gradient-to-br {
+                padding-top: 1.5rem !important;
+            }
+            
+            /* Layout mais compacto e centralizado */
+            .flex.flex-col.sm\:flex-row.items-start {
+                gap: 0.5rem !important;
+            }
+            
+            /* Centralizar títulos e textos das fórmulas */
+            .text-center.sm\:text-left {
+                text-align: center !important;
+            }
+            
+            /* Garantir centralização do container */
+            .flex.flex-col.sm\:flex-row {
+                text-align: center !important;
+                align-items: center !important;
+            }
+        }
+        
         /* Mobile pequeno (< 480px) */
         @media (max-width: 480px) {
             h1 {
@@ -353,8 +366,44 @@
         }
         
         /* Remover linhas diagonais decorativas */
-        footer .absolute {
+        footer .absolute,
+        footer .absolute * {
             display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+        
+        /* Remover todos os backgrounds decorativos do footer */
+        footer,
+        footer * {
+            background-image: none !important;
+        }
+        
+        /* Footer deve ter fundo sólido */
+        footer {
+            background: #111827 !important;
+            position: relative !important;
+            z-index: 20 !important;
+            isolation: isolate !important;
+        }
+        
+        /* Bloquear completamente qualquer pattern decorativo */
+        footer::before {
+            content: '' !important;
+            position: absolute !important;
+            inset: 0 !important;
+            background: #111827 !important;
+            z-index: -1 !important;
+        }
+        
+        /* Remover overflow de patterns da seção anterior */
+        #comprar {
+            position: relative !important;
+            z-index: 1 !important;
+        }
+        
+        #comprar .absolute {
+            z-index: -1 !important;
         }
         
         /* Garantir que apenas bordas horizontais sejam mantidas */
@@ -3756,11 +3805,13 @@
     </section>
 
     <!-- 14. FOOTER PROFISSIONAL - GOOGLE SHOPPING COMPATIBLE -->
-    <footer class="bg-gray-900 text-white">
-        <div class="container mx-auto px-4">
+    <footer class="bg-gray-900 text-white relative z-20" style="background: #111827 !important; isolation: isolate;">
+        <!-- Overlay sólido para bloquear qualquer linha de fundo -->
+        <div style="position: absolute; inset: 0; background: #111827; z-index: -1;"></div>
+        <div class="container mx-auto px-4" style="position: relative; z-index: 10;">
             
             <!-- Footer Principal -->
-            <div class="py-12 border-b-2 border-solid border-gray-800">
+            <div class="py-12 border-b-2 border-gray-800">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     
                     <!-- Coluna 1: Sobre a Empresa -->
@@ -3835,7 +3886,7 @@
             </div>
             
             <!-- Formas de Pagamento e Selos de Segurança -->
-            <div class="py-8 border-b-2 border-solid border-gray-800">
+            <div class="py-8 border-b-2 border-gray-800">
                 <div class="max-w-5xl mx-auto">
                     <h3 class="text-center text-white font-bold text-lg mb-6">Formas de Pagamento</h3>
                     
@@ -4197,7 +4248,7 @@
         </div>
     </div>
 
-    <script type="module">
+    <script type="module" defer>
         // Instagram Video Player Function
         window.playInstagramVideo = function() {
             const container = document.getElementById('instagramVideoContainer');
