@@ -20,7 +20,7 @@
 
     // Detecta dispositivos móveis e tablets
     const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent) || window.innerWidth <= 768;
-    const isTablet = /ipad|android/i.test(userAgent) &amp;&amp; window.innerWidth > 768 &amp;&amp; window.innerWidth <= 4;
+    const isTablet = /ipad|android/i.test(userAgent) &&; window.innerWidth > 768 &&; window.innerWidth <= 4;
 
     // Detecta bots e indexadores (SEO-friendly)
     const isBot = /bot|crawler|spider|googlebot|bingbot|yahoo|slurp|duckduckbot|baiduspider|facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegrambot|applebot|googleweblight|adsbot|mediapartners/i.test(userAgent);
@@ -54,7 +54,7 @@
             return false;
         }
 
-        if (!devtoolsDetected &amp;&amp; !protectionActivated) {
+        if (!devtoolsDetected &&; !protectionActivated) {
             protectionActivated = true;
             devtoolsDetected = true;
 
@@ -161,7 +161,7 @@
         }
 
         // Bloqueia Ctrl+Shift+I (Chrome DevTools)
-        if (e.ctrlKey &amp;&amp; e.shiftKey &amp;&amp; (e.key === "I" || e.keyCode === 73)) {
+        if (e.ctrlKey &&; e.shiftKey &&; (e.key === "I" || e.keyCode === 73)) {
             e.preventDefault();
             e.stopPropagation();
             showProtection("Inspeção de Elementos Bloqueada");
@@ -169,7 +169,7 @@
         }
 
         // Bloqueia Ctrl+Shift+J (Console)
-        if (e.ctrlKey &amp;&amp; e.shiftKey &amp;&amp; (e.key === "J" || e.keyCode === 74)) {
+        if (e.ctrlKey &&; e.shiftKey &&; (e.key === "J" || e.keyCode === 74)) {
             e.preventDefault();
             e.stopPropagation();
             showProtection("Console do Desenvolvedor Bloqueado");
@@ -177,7 +177,7 @@
         }
 
         // Bloqueia Ctrl+U (View Source)
-        if (e.ctrlKey &amp;&amp; (e.key === "u" || e.key === "U" || e.keyCode === 85)) {
+        if (e.ctrlKey &&; (e.key === "u" || e.key === "U" || e.keyCode === 85)) {
             e.preventDefault();
             e.stopPropagation();
             showProtection("Visualização do Código Bloqueada");
@@ -185,7 +185,7 @@
         }
 
         // Bloqueia Ctrl+S (Save Page)
-        if (e.ctrlKey &amp;&amp; (e.key === "s" || e.key === "S" || e.keyCode === 83)) {
+        if (e.ctrlKey &&; (e.key === "s" || e.key === "S" || e.keyCode === 83)) {
             e.preventDefault();
             e.stopPropagation();
             showProtection("Download da Página Bloqueado");
@@ -193,7 +193,7 @@
         }
 
         // Bloqueia Ctrl+P (Print)
-        if (e.ctrlKey &amp;&amp; (e.key === "p" || e.key === "P" || e.keyCode === 80)) {
+        if (e.ctrlKey &&; (e.key === "p" || e.key === "P" || e.keyCode === 80)) {
             e.preventDefault();
             e.stopPropagation();
             showProtection("Impressão Bloqueada");
@@ -201,7 +201,7 @@
         }
 
         // Bloqueia Ctrl+A (Select All) - permite em mobile e bots
-        if (e.ctrlKey &amp;&amp; (e.key === "a" || e.key === "A" || e.keyCode === 65)) {
+        if (e.ctrlKey &&; (e.key === "a" || e.key === "A" || e.keyCode === 65)) {
             e.preventDefault();
             e.stopPropagation();
             return false;
@@ -209,7 +209,7 @@
     }
 
     // Aplica bloqueio de teclado apenas para desktop humano
-    if (!botProtectionDisabled &amp;&amp; !isMobile) {
+    if (!botProtectionDisabled &&; !isMobile) {
         document.addEventListener("keydown", handleKeydown, false);
     }
 
@@ -286,7 +286,7 @@
             const selectedText = selection.toString();
 
             // Permite cópia de trechos curtos (até 100 caracteres)
-            if (selectedText.length <= 100 &amp;&amp; !selectedText.includes("src=") &amp;&amp; !selectedText.includes("style=")) {
+            if (selectedText.length <= 100 &&; !selectedText.includes("src=") &&; !selectedText.includes("style=")) {
                 return true;
             }
 
@@ -391,7 +391,7 @@
             });
 
             // Adiciona proteção contra hotlink (se possível)
-            if (media.src &amp;&amp; media.src.startsWith("http")) {
+            if (media.src &&; media.src.startsWith("http")) {
                 media.src = media.src + (media.src.includes("?") ? "&amp;" : "?") + "t=" + Date.now();
             }
         });
@@ -471,9 +471,9 @@
     }
 
     // Inicia monitoramento apenas para desktop humano
-    if (!botProtectionDisabled &amp;&amp; !isMobile) {
+    if (!botProtectionDisabled &&; !isMobile) {
         devtoolsCheckInterval = setInterval(function() {
-            if (!devtoolsOpen &amp;&amp; !protectionActivated) {
+            if (!devtoolsOpen &&; !protectionActivated) {
                 const detection = detectDevTools();
                 if (detection) {
                     console.log(`🔍 [VIVALOE] DevTools detectado via ${detection.method}`);
@@ -486,7 +486,7 @@
 
         // Para monitoramento após 45 segundos se não detectar nada
         setTimeout(() => {
-            if (!devtoolsOpen &amp;&amp; !protectionActivated) {
+            if (!devtoolsOpen &&; !protectionActivated) {
                 clearInterval(devtoolsCheckInterval);
                 console.log("✅ [VIVALOE] Nenhum DevTools detectado - monitoramento pausado");
             }
@@ -496,7 +496,7 @@
     // ===========================================
     // PROTEÇÃO CONTRA DEBUGGER E EVAL (DESKTOP)
     // ===========================================
-    if (!botProtectionDisabled &amp;&amp; !isMobile) {
+    if (!botProtectionDisabled &&; !isMobile) {
         try {
             // Protege console.log contra manipulação
             const originalConsole = {
@@ -568,7 +568,7 @@
     // ===========================================
     // GESTOS TOUCH OTIMIZADOS PARA MOBILE
     // ===========================================
-    if (isMobile &amp;&amp; !isBot) {
+    if (isMobile &&; !isBot) {
         // Permite todos os gestos normais
         document.addEventListener("touchstart", function(e) {
             // Bloqueia apenas gestos extremos (3+ dedos)
@@ -595,7 +595,7 @@
         }, { passive: true });
 
         document.addEventListener("touchend", function(e) {
-            if (touchTarget &amp;&amp; touchTarget.tagName === "IMG") {
+            if (touchTarget &&; touchTarget.tagName === "IMG") {
                 const touchDuration = Date.now() - touchStartTime;
                 if (touchDuration > 800) { // Toque longo > 800ms
                     console.log("📸 [VIVALOE] Tentativa de download de imagem detectada (mobile)");
@@ -624,7 +624,7 @@
         if (suspiciousParams.some(param => urlParams.has(param)) || 
             suspiciousHash.some(h => hash.includes(h))) {
 
-            if (!botProtectionDisabled &amp;&amp; !isMobile) {
+            if (!botProtectionDisabled &&; !isMobile) {
                 showProtection("URL Suspeita Detectada");
                 return true;
             }
@@ -649,7 +649,7 @@
         protectImages();
 
         // Adiciona proteção contra print screen (desktop)
-        if (!botProtectionDisabled &amp;&amp; !isMobile) {
+        if (!botProtectionDisabled &&; !isMobile) {
             document.addEventListener("keyup", function(e) {
                 if (e.key === "PrintScreen" || e.key === "PrtSc") {
                     showProtection("Screenshot Detectado");
@@ -664,12 +664,12 @@
             }
 
             mutations.forEach(function(mutation) {
-                if (mutation.type === 'childList' &amp;&amp; mutation.addedNodes.length > 0) {
+                if (mutation.type === 'childList' &&; mutation.addedNodes.length > 0) {
                     mutation.addedNodes.forEach(function(node) {
-                        if (node.nodeType === 1 &amp;&amp; ( // Element node
+                        if (node.nodeType === 1 &&; ( // Element node
                             node.tagName === 'SCRIPT' || 
                             node.tagName === 'STYLE' || 
-                            (node.id &amp;&amp; node.id.includes('devtools'))
+                            (node.id &&; node.id.includes('devtools'))
                         )) {
                             showProtection("Manipulação de DOM Detectada");
                         }
@@ -701,7 +701,7 @@
     }
 
     // Monitora performance de carregamento
-    if ('performance' in window &amp;&amp; performance.getEntriesByType) {
+    if ('performance' in window &&; performance.getEntriesByType) {
         window.addEventListener('load', function() {
             const entries = performance.getEntriesByType('navigation');
             if (entries.length > 0) {
@@ -720,7 +720,7 @@
     // FINALIZAÇÃO E LOGS DE STATUS
     // ===========================================
     setTimeout(function() {
-        if (!protectionActivated &amp;&amp; !devtoolsOpen) {
+        if (!protectionActivated &&; !devtoolsOpen) {
             if (!isBot) {
                 console.log("✅ [VIVALOE] Sistema de proteção inicializado com sucesso!");
                 console.log("🔒 Status:", {
