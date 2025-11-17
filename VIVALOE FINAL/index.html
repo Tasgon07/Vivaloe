@@ -1,63 +1,90 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- 
-    ⚡ OTIMIZAÇÕES DE SERVIDOR NECESSÁRIAS:
-    Crie um arquivo _headers na raiz do Netlify com:
-    /*
-      Cache-Control: public, max-age=31536000, immutable
-      X-Content-Type-Options: nosniff
-      X-Frame-Options: DENY
-      Content-Encoding: gzip
-    -->
-    
     <title>Kit 3 Folhas Babosa Fresca 42% OFF | VIVALOE</title>
     <meta name="description" content="Babosa fresca premium direto da fazenda. 42% OFF + Frete Amazon Prime TODO BRASIL. 900-1200ml gel puro. Cabelo, pele e saúde transformados!">
     
-    <!-- Performance & SEO -->
-    <meta name="theme-color" content="#16a34a">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="https://www.vivaloe.com.br">
-    
-    <!-- Critical Resource Hints -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <!-- Preconnect para recursos externos -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.instagram.com">
-    <link rel="dns-prefetch" href="https://platform.instagram.com">
-    <link rel="dns-prefetch" href="https://www.youtube.com">
     
-    <!-- Tailwind CSS - Carregamento Síncrono -->
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts - Display Swap (Mostra Conteúdo Imediatamente) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <!-- ===========================================
        PROTEÇÃO ANTI-PLÁGIO VIVALOE
        =========================================== -->
     <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <!-- ===========================================
        FIM DAS META TAGS DE PROTEÇÃO
        =========================================== -->
     <style>
-        /* Critical CSS - Above the Fold */
-        *{box-sizing:border-box;margin:0;padding:0}
-        html{-webkit-text-size-adjust:100%;line-height:1.5;visibility:visible!important;opacity:1!important}
-        body{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth;cursor:default!important;visibility:visible!important;opacity:1!important}
-        img,video{max-width:100%;height:auto;display:block}
-        a{text-decoration:none;color:inherit}
-        
-        /* Proteção Anti-Plágio */
-        body,html,*,div,p,h1,h2,h3,h4,h5,h6,span,a,button,input,textarea{user-select:none!important;-webkit-user-select:none!important;-moz-user-select:none!important}
-        img,svg,picture,video{pointer-events:none!important;-webkit-user-drag:none!important;-webkit-touch-callout:none!important}
-        *::selection,*::-moz-selection{background:transparent!important;color:inherit!important}
-        #notificationPopup.show{transform:translateX(0)}
+        /* ===========================================
+           PROTEÇÃO ANTI-PLÁGIO - CSS VIVALOE
+           =========================================== */
+        body, html, *, div, p, h1, h2, h3, h4, h5, h6, span, a, button, input, textarea {
+            user-select: none !important;
+            -webkit-user-select: none !important;
+            -moz-user-select: none !important;
+            -ms-user-select: none !important;
+            -o-user-select: none !important;
+        }
+
+        img, svg, picture, video {
+            pointer-events: none !important;
+            -webkit-user-drag: none !important;
+            -khtml-user-drag: none !important;
+            -moz-user-drag: none !important;
+            -o-user-drag: none !important;
+            user-drag: none !important;
+            -webkit-touch-callout: none !important;
+        }
+
+        *::-moz-selection {
+            background: transparent !important;
+            color: inherit !important;
+        }
+
+        *::selection {
+            background: transparent !important;
+            color: inherit !important;
+        }
+
+        body {
+            cursor: default !important;
+            -webkit-text-size-adjust: 100% !important;
+            -ms-text-size-adjust: 100% !important;
+        }
+        /* ===========================================
+           FIM DA PROTEÇÃO CSS
+           =========================================== */
+
+        /* Estilos originais do Hatch Canvas */
+        body { 
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        #notificationPopup.show { transform: translateX(0); }
+
+        /* Resto dos seus estilos continua aqui embaixo */
+        body { 
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        #notificationPopup.show { transform: translateX(0); }
         
         /* ===========================================
            OTIMIZAÇÕES DE PERFORMANCE - LAZY LOADING
@@ -80,19 +107,10 @@
             opacity: 1;
         }
         
-        /* Otimização agressiva de imagens */
+        /* Otimização de renderização */
         img {
             content-visibility: auto;
             contain-intrinsic-size: 500px;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
-        }
-        
-        /* Compressão via CSS */
-        img:not([src*="logo"]):not([src*="icon"]) {
-            filter: contrast(1.05) brightness(1.02);
-            transform: translateZ(0);
-            backface-visibility: hidden;
         }
         
         /* Will-change para animações */
@@ -111,21 +129,9 @@
         /* Lazy loading para iframes */
         iframe[loading="lazy"],
         iframe[src*="youtube"],
-        iframe[src*="youtu.be"],
-        .instagram-media[loading="lazy"] {
+        iframe[src*="youtu.be"] {
             content-visibility: auto;
             contain-intrinsic-size: 500px 800px;
-        }
-        
-        /* Otimização CRÍTICA - Instagram Embeds */
-        .instagram-media {
-            will-change: transform;
-            transform: translateZ(0);
-        }
-        
-        /* Bloquear scripts desnecessários do Instagram até interação */
-        .instagram-media script {
-            loading: lazy;
         }
         
         /* ===========================================
@@ -167,21 +173,7 @@
                 border-radius: 1.5rem !important;
             }
             
-            /* Instagram embed mobile - Modo Portrait */
-            .instagram-media {
-                min-width: 100% !important;
-                max-width: 100% !important;
-                aspect-ratio: 9/16 !important;
-                height: auto !important;
-            }
-            
-            /* Instagram embed portrait corrigido */
-            iframe[src*="instagram"] {
-                aspect-ratio: 9/16 !important;
-                max-height: 800px !important;
-                width: 100% !important;
-                height: auto !important;
-            }
+
             
             /* Badges e botões menores */
             .animate-pulse {
@@ -265,17 +257,7 @@
                 height: auto !important;
             }
             
-            /* Instagram embed iframe no mobile - Portrait fix */
-            @media (max-width: 768px) {
-                iframe[src*="instagram"],
-                .instagram-media {
-                    aspect-ratio: 9/16 !important;
-                    max-width: 100% !important;
-                    width: 100% !important;
-                    height: auto !important;
-                    max-height: 800px !important;
-                }
-            }
+
             
             /* Touch targets maiores */
             a, button {
@@ -465,7 +447,7 @@
                 <!-- Layout 2 Colunas: Informações Esquerda | Vídeo Direita -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                     <!-- COLUNA ESQUERDA: Informações -->
-                    <div class="order-1 lg:order-1">
+                    <div>
                         <div class="inline-block bg-green-600 text-white px-6 py-3 rounded-full text-sm font-bold mb-6 animate-pulse">
                             <div class="text-center leading-tight">🌿 TRANSFORME SUA ROTINA</div>
                             <div class="text-center leading-tight">COM A NATUREZA</div>
@@ -526,59 +508,55 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- CTA Esquerda - Escondido no mobile -->
-                        <div class="hidden lg:block">
-                            <div class="flex flex-col sm:flex-row gap-4">
-                                <a href="#produto" class="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-full font-black text-lg shadow-2xl hover:shadow-3xl hover:scale-105 transition">
-                                    🌱 Começar Minha Transformação
-                                </a>
-                            </div>
-                            <p class="text-gray-600 mt-4 text-sm">
-                                ⭐⭐⭐⭐⭐ Mais de 2.847 pessoas já transformaram sua rotina
-                            </p>
-                        </div>
                     </div>
 
-                    <!-- COLUNA DIREITA: Card da Fundadora -->
-                    <div class="flex justify-center lg:justify-end order-2 lg:order-2">
+                    <!-- COLUNA DIREITA: Card de Vídeo Instagram -->
+                    <div class="flex justify-center lg:justify-end">
                         <div class="w-full max-w-md">
-                            <!-- Card Fundadora -->
-                            <a href="https://www.instagram.com/p/DO9YSHRDheV/" target="_blank" rel="noopener" style="display: block; background: linear-gradient(135deg, #15803d 0%, #166534 100%); padding: 1.5rem; border-radius: 1.5rem; box-shadow: 0 20px 50px rgba(21, 128, 61, 0.4); text-decoration: none; transition: transform 0.3s ease; position: relative;">
-                                <div style="background: white; border-radius: 1rem; overflow: hidden;">
-                                    <!-- Foto -->
-                                    <img src="assets/Do campo para voce.jpg" alt="Fundadora Vivaloe" style="width: 100%; height: auto; display: block; object-fit: cover;">
-                                    
-                                    <!-- Conteúdo -->
-                                    <div style="padding: 2rem 1.5rem; text-align: center;">
-                                        <h4 style="font-size: 1.5rem; font-weight: 900; color: #111827; margin-bottom: 1rem; line-height: 1.3;">Mensagem de Boas-Vindas</h4>
-                                        <p style="color: #15803d; font-weight: 700; font-size: 1.125rem; margin-bottom: 1.5rem;">Do campo para você,<br>natural como deve ser 🌿</p>
-                                        <div style="display: inline-block; background: linear-gradient(to right, #15803d, #166534); color: white; padding: 0.875rem 1.75rem; border-radius: 9999px; font-weight: 700; font-size: 0.875rem;">@vivaloeoficial</div>
+                            <!-- Card de Vídeo do Instagram -->
+                            <a href="https://www.instagram.com/p/DO9YSHRDheV/" target="_blank" rel="noopener noreferrer" class="block group">
+                                <div class="relative bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500 rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                                    <!-- Aspect Ratio Container (9:16 para Reels) -->
+                                    <div class="aspect-[9/16] relative">
+                                        <!-- Background Image -->
+                                        <img src="k49x92RYPRbVb2VxBvwaT" alt="VIVALOE - Do Campo Para Você" class="absolute inset-0 w-full h-full object-cover object-top">
+                                        
+                                        <!-- Gradient Overlay -->
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-black/20"></div>
+                                        
+                                        <!-- Instagram Icon -->
+                                        <div class="absolute top-4 right-4">
+                                            <div class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center">
+                                                <svg class="w-6 h-6 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Bottom Info -->
+                                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full"></div>
+                                                <div>
+                                                    <p class="text-white font-bold text-sm">@vivaloeoficial</p>
+                                                    <p class="text-white/80 text-xs">Ver no Instagram</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                
-                                <!-- Botão Play Centralizado -->
-                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(255, 255, 255, 0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); border: 4px solid #15803d;">
-                                    <svg style="width: 36px; height: 36px; fill: #15803d; margin-left: 4px;" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z"/>
-                                    </svg>
-                                </div>
                             </a>
-                            <!-- EMBED REMOVIDO - Card leve acima --><blockquote style="display:none;" class="instagram-media-removed" data-instgrm-permalink="https://www.instagram.com/reel/DO9YSHRDheV/?utm_source=ig_embed&;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DO9YSHRDheV/?utm_source=ig_embed&;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver essa foto no Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DO9YSHRDheV/?utm_source=ig_embed&;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Uma publicação compartilhada por Vivaloe (@vivaloeoficial)</a></p></div></blockquote>
-
+                            
+                            <!-- CTA Abaixo do Vídeo -->
+                            <div class="mt-6 text-center">
+                                <p class="text-lg font-bold text-gray-900 mb-2">
+                                    🌱 Do Campo Para Você
+                                </p>
+                                <p class="text-sm text-gray-600">
+                                    Uma história de família, natureza e transformação
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <!-- CTA Mobile - Aparece apenas no mobile abaixo do vídeo -->
-                    <div class="lg:hidden order-3 text-center px-4">
-                        <div class="flex flex-col gap-4">
-                            <a href="#produto" class="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-full font-black text-lg shadow-2xl hover:shadow-3xl hover:scale-105 transition">
-                                🌱 Começar Minha Transformação
-                            </a>
-                        </div>
-                        <p class="text-gray-600 mt-4 text-sm">
-                            ⭐⭐⭐⭐⭐ Mais de 2.847 pessoas já transformaram sua rotina
-                        </p>
                     </div>
                 </div>
             </div>
@@ -588,9 +566,9 @@
     <!-- 3. KIT 3 FOLHAS: PRODUTO + OFERTA -->
     <section id="produto" class="bg-gradient-to-br from-white via-green-50 to-white py-16">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                <div>
-                    <div class="inline-block bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+            <div class="flex flex-col md:grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div class="order-1 md:order-none flex flex-col">
+                    <div class="inline-block bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse w-fit">
                         🔥 OFERTA LIMITADA - 42% OFF
                     </div>
                     <h2 class="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-6">
@@ -601,7 +579,7 @@
                     </p>
                     
                     <!-- Oferta Destaque -->
-                    <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-2xl border-2 border-orange-300 mb-6">
+                    <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-2xl border-2 border-orange-300 mb-6 order-1 md:order-none">
                         <div class="text-center">
                             <div class="text-sm text-gray-600 mb-1">De <span class="line-through">R$ 99,80</span></div>
                             <div class="text-5xl font-black text-green-700 mb-2">R$ 57,90</div>
@@ -609,7 +587,7 @@
                         </div>
                     </div>
 
-                    <ul class="space-y-3 mb-8">
+                    <ul class="space-y-3 mb-8 order-2 md:order-none">
                         <li class="flex items-start gap-3">
                             <span class="text-2xl">✅</span>
                             <span class="text-lg"><strong>300-400ml por folha</strong> - Rendimento excepcional</span>
@@ -623,35 +601,21 @@
                             <span class="text-lg"><strong>Zero conservantes químicos</strong> - 100% pura</span>
                         </li>
                     </ul>
-                    
-                    <a href="#comprar" class="hidden md:block w-full bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-5 rounded-full font-black text-xl text-center shadow-2xl hover:shadow-3xl hover:scale-105 transition mb-4">
-                        🛒 GARANTIR MEU KIT COM 42% OFF
-                    </a>
-                    
-                    <div class="hidden md:flex items-center justify-center gap-4 text-sm text-gray-600">
-                        <span>🔒 Compra Segura</span>
-                        <span>📦 Amazon Prime</span>
-                        <span>✓ Garantia 7 Dias</span>
-                    </div>
                 </div>
-                <div class="relative">
-                    <img src="assets/xOAv00MIlvSRUEogSmvpZ.jpg" 
+                <div class="relative order-2 md:order-none">
+                    <img src="assets/xOAv00MIlvSRUEogSmvpZ.jpeg" 
                          alt="Kit 3 Folhas VIVALOE - Produto Real com Embalagem Premium" 
                          class="rounded-3xl shadow-2xl w-full object-cover"
                          loading="lazy">
-                    <div class="absolute -bottom-4 -left-4 bg-white p-4 rounded-2xl shadow-xl hidden md:block">
+                    <div class="absolute -bottom-4 -left-4 bg-white p-4 rounded-2xl shadow-xl">
                         <div class="text-green-600 font-black text-3xl">900-1200ml</div>
                         <div class="text-gray-700 font-semibold">Gel Puro Total</div>
                     </div>
-                    
-                    <!-- Badge Mobile - Visível apenas no Mobile (não absolute) -->
-                    <div class="md:hidden mt-4 bg-white p-4 rounded-2xl shadow-xl inline-block">
-                        <div class="text-green-600 font-black text-3xl">900-1200ml</div>
-                        <div class="text-gray-700 font-semibold">Gel Puro Total</div>
-                    </div>
-                    
-                    <!-- Botão e Badges - Visível apenas no Mobile -->
-                    <div class="md:hidden mt-6">
+                </div>
+
+                <!-- CTA - ÚLTIMO ELEMENTO NO MOBILE -->
+                <div class="order-3 md:order-none w-full md:col-span-2">
+                    <div class="max-w-2xl mx-auto">
                         <a href="#comprar" class="block w-full bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-5 rounded-full font-black text-xl text-center shadow-2xl hover:shadow-3xl hover:scale-105 transition mb-4">
                             🛒 GARANTIR MEU KIT COM 42% OFF
                         </a>
@@ -667,7 +631,7 @@
         </div>
     </section>
 
-    <!-- 4. CANSOU DOS QUÍMICOS? -->
+    <!-- 4. CANSADA DE QUÍMICOS? -->
     <section class="bg-gradient-to-br from-green-50 to-white py-16">
         <div class="container mx-auto px-4">
             <div class="max-w-7xl mx-auto">
@@ -675,7 +639,7 @@
                     <!-- Coluna Esquerda: Texto -->
                     <div>
                         <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-                            Cansou dos químicos?<br>
+                            Cansada de químicos?<br>
                             <span class="text-green-700">A natureza tem a resposta mais pura.</span>
                         </h2>
 
@@ -708,26 +672,19 @@
                                 <div class="text-sm">Da Fazenda pra Você</div>
                             </div>
                         </div>
-
-                        <!-- CTA - Visível apenas no Desktop -->
-                        <div class="mt-8 hidden md:block">
-                            <a href="#comprar" class="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full font-black text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition">
-                                🌿 Escolher o Caminho Natural
-                            </a>
-                        </div>
                     </div>
 
                     <!-- Coluna Direita: Foto Real Fundadora -->
                     <div class="relative">
                         <div class="rounded-3xl overflow-hidden shadow-2xl">
-                            <img src="assets/lliashSPRUUAaBgNyYMaK.jpg" 
+                            <img src="assets/lliashSPRUUAaBgNyYMaK.jpeg" 
                                  alt="Fundadora VIVALOE preparando folhas frescas de Aloe Vera" 
                                  class="w-full h-auto"
                                  loading="lazy">
                         </div>
                         
-                        <!-- Badge Flutuante Desktop -->
-                        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl max-w-xs hidden md:block">
+                        <!-- Badge Flutuante -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl max-w-xs">
                             <div class="flex items-center gap-3">
                                 <div class="text-4xl">🌱</div>
                                 <div>
@@ -735,24 +692,6 @@
                                     <div class="text-sm text-gray-600">Colhida hoje, na sua casa amanhã</div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <!-- Badge Mobile (não absolute) -->
-                        <div class="md:hidden mt-4 bg-white p-6 rounded-2xl shadow-2xl inline-block">
-                            <div class="flex items-center gap-3">
-                                <div class="text-4xl">🌱</div>
-                                <div>
-                                    <div class="font-black text-gray-900 text-lg">Direto da Fazenda</div>
-                                    <div class="text-sm text-gray-600">Colhida hoje, na sua casa amanhã</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- CTA Mobile -->
-                        <div class="md:hidden mt-6">
-                            <a href="#comprar" class="block w-full bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full font-black text-lg text-center shadow-xl hover:shadow-2xl hover:scale-105 transition">
-                                🌿 Escolher o Caminho Natural
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -1396,7 +1335,7 @@
                             </div>
                         </div>
                         <div class="relative">
-                            <img src="assets/t8Wgji-SCz0yXoHqqmwMm.jpg" alt="Pirâmide de gel VIVALOE mostrando abundância de gel puro e fresco" class="w-full h-auto rounded-2xl shadow-xl" loading="lazy" width="600" height="400">
+                            <img src="assets/t8Wgji-SCz0yXoHqqmwMm.jpeg" alt="Pirâmide de gel VIVALOE mostrando abundância de gel puro e fresco" class="w-full h-auto rounded-2xl shadow-xl" loading="lazy" width="600" height="400">
                             <div class="absolute -top-4 -right-4 bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-black text-sm shadow-xl transform rotate-12">
                                 🔥 MUITO GEL!
                             </div>
@@ -1435,7 +1374,7 @@
 
                             <!-- Foto Concorrente -->
                             <div class="mb-6 rounded-2xl overflow-hidden shadow-xl">
-                                <img src="assets/TZo6t39_nMrFh7T5xfY49.jpg" alt="Folhas de babosa de concorrentes com qualidade inferior" class="w-full h-auto" loading="lazy" width="500" height="350">
+                                <img src="assets/TZo6t39_nMrFh7T5xfY49.jpeg" alt="Folhas de babosa de concorrentes com qualidade inferior" class="w-full h-auto" loading="lazy" width="500" height="350">
                             </div>
 
                             <!-- Desvantagens -->
@@ -1556,7 +1495,7 @@
 
                             <!-- Foto VIVALOE -->
                             <div class="mb-6 rounded-2xl overflow-hidden shadow-xl">
-                                <img src="assets/7-XYeMfCVQxItODyb42sb.jpg" alt="Fundadora VIVALOE segurando folha de babosa premium gigante" class="w-full h-auto" loading="lazy" width="500" height="350">
+                                <img src="assets/7-XYeMfCVQxItODyb42sb.jpeg" alt="Fundadora VIVALOE segurando folha de babosa premium gigante" class="w-full h-auto" loading="lazy" width="500" height="350">
                             </div>
 
                             <!-- Vantagens -->
@@ -1756,7 +1695,7 @@
                     <!-- Foto da Balança -->
                     <div class="max-w-xl mx-auto mb-8">
                         <div class="bg-white p-4 rounded-2xl shadow-xl">
-                            <img src="assets/j_3GvVegfiAfFPoOXduxo.jpg" alt="Caixa VIVALOE na balança mostrando 1694g de peso total" class="w-full h-auto rounded-xl">
+                            <img src="assets/j_3GvVegfiAfFPoOXduxo.jpeg" alt="Caixa VIVALOE na balança mostrando 1694g de peso total" class="w-full h-auto rounded-xl">
                             <div class="text-center mt-4">
                                 <div class="text-green-700 font-black text-xl mb-2">
                                     ✅ PROVA REAL: 1.694g na Balança!
@@ -1796,7 +1735,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Card 1: Gel + Casca -->
                     <div class="bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-105 transition">
-                        <img src="assets/brhxiZ_1G59-54qihhJpg.jpg" alt="Pedaço de gel VIVALOE com casca mostrando textura perfeita" class="w-full h-64 object-cover">
+                        <img src="assets/brhxiZ_1G59-54qihhJpg.jpeg" alt="Pedaço de gel VIVALOE com casca mostrando textura perfeita" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h4 class="font-black text-xl text-gray-900 mb-2">Textura Perfeita</h4>
                             <p class="text-gray-600 text-sm">Gel translúcido e viscoso - não é aguado!</p>
@@ -1805,7 +1744,7 @@
 
                     <!-- Card 2: Gel Puro -->
                     <div class="bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-105 transition">
-                        <img src="assets/is8jJtkWe2F3S5i1Ub7iv.jpg" alt="Gel puro VIVALOE na mão mostrando viscosidade" class="w-full h-64 object-cover">
+                        <img src="assets/is8jJtkWe2F3S5i1Ub7iv.jpeg" alt="Gel puro VIVALOE na mão mostrando viscosidade" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h4 class="font-black text-xl text-gray-900 mb-2">Pureza Absoluta</h4>
                             <p class="text-gray-600 text-sm">Filamentos naturais visíveis - gel 100% puro</p>
@@ -1814,7 +1753,7 @@
 
                     <!-- Card 3: Extração -->
                     <div class="bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-105 transition">
-                        <img src="assets/bCaAG91TMdZAdNotsiM_y.jpg" alt="Casca e gel VIVALOE separados mostrando extração fácil" class="w-full h-64 object-cover">
+                        <img src="assets/bCaAG91TMdZAdNotsiM_y.jpeg" alt="Casca e gel VIVALOE separados mostrando extração fácil" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h4 class="font-black text-xl text-gray-900 mb-2">Extração Fácil</h4>
                             <p class="text-gray-600 text-sm">Folhas grossas = gel abundante e fácil de extrair</p>
@@ -1868,18 +1807,11 @@
                 <div class="bg-gradient-to-br from-white to-green-50 p-2 rounded-3xl shadow-2xl border-4 border-green-400">
                     <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-4 md:p-6 lg:p-8">
                         
-                        <!-- Texto Introdutório Eliane -->
-                        <div class="mb-6 text-center lg:text-left">
-                            <p class="text-green-300 text-lg md:text-xl font-bold">
-                                A esteticista <strong class="text-yellow-300">Eliane Vasconcelos</strong> preparou um passo a passo incrível:
-                            </p>
-                        </div>
-                        
-                        <!-- Grid: Vídeo + Depoimentos -->
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
+                        <!-- Grid: Vídeo + Info -->
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
                             
-                            <!-- COLUNA ESQUERDA: Vídeo + 3 Boxes -->
-                            <div>
+                            <!-- COLUNA ESQUERDA: Badge + Título + Vídeo -->
+                            <div class="flex flex-col">
                                 <!-- Badge Profissional -->
                                 <div class="mb-4">
                                     <div class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-black text-base shadow-2xl border-4 border-purple-400 animate-pulse">
@@ -1892,66 +1824,85 @@
                                     Aprenda a Fazer Creme Corporal e Facial Natural
                                 </h3>
 
-                                <!-- Vídeo Instagram Incorporado -->
-                                <div>
-                                    <!-- Card Instagram Leve - Eliane -->
-                                    <a href="https://www.instagram.com/reel/DPoMAsGDonF/" target="_blank" rel="noopener" style="display: block; background: linear-gradient(135deg, #f9a8d4 0%, #c084fc 50%, #fb923c 100%); padding: 2rem; border-radius: 1.5rem; box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3); text-decoration: none; max-width: 500px;">
-                                        <div style="background: white; border-radius: 1rem; padding: 1.5rem; text-align: center;">
-                                            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #a855f7, #ec4899); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                                                <svg style="width: 40px; height: 40px; fill: white;" viewBox="0 0 24 24">
-                                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
-                                                    <path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4z"/>
-                                                </svg>
+                                <!-- Texto Esteticista -->
+                                <div class="mb-6">
+                                    <p class="text-green-300 text-xl md:text-2xl font-bold leading-relaxed">
+                                        A esteticista <strong class="text-yellow-300">Eliane Vasconcelos</strong> preparou um passo a passo incrível:
+                                    </p>
+                                </div>
+
+                                <!-- Card de Vídeo Instagram -->
+                                <div class="mb-6">
+                                    <a href="https://www.instagram.com/p/DPoMAsGDonF/" target="_blank" rel="noopener noreferrer" class="block group">
+                                        <div class="relative bg-gradient-to-br from-purple-500 via-pink-400 to-pink-300 rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center p-6" style="aspect-ratio: 1 / 0.7;">
+                                            <!-- Instagram Icon Top -->
+                                            <div class="mb-4">
+                                                <div class="w-14 h-14 bg-white rounded-3xl flex items-center justify-center shadow-lg">
+                                                    <svg class="w-8 h-8 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                                    </svg>
+                                                </div>
                                             </div>
-                                            <h4 style="font-size: 1.25rem; font-weight: 900; color: #111827; margin-bottom: 0.5rem;">Depoimento Eliane</h4>
-                                            <p style="color: #a855f7; font-weight: 700; font-size: 0.875rem;">🎥 Ver vídeo completo</p>
-                                            <div style="margin-top: 0.75rem; color: #6b7280; font-size: 0.75rem;">@vivaloeoficial</div>
+
+                                            <!-- Text Content -->
+                                            <div class="text-center mb-4">
+                                                <h4 class="text-white font-black text-lg mb-3 leading-tight">Depoimento Eliane</h4>
+                                                <div class="bg-gray-900/30 backdrop-blur-sm rounded-full px-3 py-1.5 inline-flex items-center gap-2">
+                                                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                                    <p class="text-white text-xs font-semibold">Ver vídeo completo</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Play Button Center -->
+                                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                                                    <svg class="w-8 h-8 text-pink-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                         </div>
                                     </a>
-                                    
-                                    <!-- Benefícios do Tutorial - Movidos para baixo do vídeo -->
-                                    <div class="space-y-3 mt-6">
-                                        <div class="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-xl border-2 border-purple-500/30">
-                                            <div class="flex-shrink-0 w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center">
-                                                <span class="text-xl">🌿</span>
-                                            </div>
-                                            <div>
-                                                <h4 class="text-white font-black text-base mb-1">100% Natural e Simples</h4>
-                                                <p class="text-green-200 text-sm">Receita fácil que você faz em casa</p>
-                                            </div>
-                                        </div>
+                                </div>
 
-                                        <div class="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-xl border-2 border-pink-500/30">
-                                            <div class="flex-shrink-0 w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
-                                                <span class="text-xl">💰</span>
-                                            </div>
-                                            <div>
-                                                <h4 class="text-white font-black text-base mb-1">Economia de Até R$ 200</h4>
-                                                <p class="text-pink-200 text-sm">Crie seu próprio creme profissional</p>
-                                            </div>
+                                <!-- 3 Boxes de Benefícios -->
+                                <div class="space-y-3">
+                                    <div class="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-xl border-2 border-purple-500/30">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center">
+                                            <span class="text-xl">🌿</span>
                                         </div>
+                                        <div>
+                                            <h4 class="text-white font-black text-base mb-1">100% Natural e Simples</h4>
+                                            <p class="text-green-200 text-sm">Receita fácil que você faz em casa</p>
+                                        </div>
+                                    </div>
 
-                                        <div class="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-xl border-2 border-green-500/30">
-                                            <div class="flex-shrink-0 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
-                                                <span class="text-xl">✨</span>
-                                            </div>
-                                            <div>
-                                                <h4 class="text-white font-black text-base mb-1">Cheio de Benefícios</h4>
-                                                <p class="text-green-200 text-sm">Hidratação, nutrição e rejuvenescimento</p>
-                                            </div>
+                                    <div class="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-xl border-2 border-pink-500/30">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
+                                            <span class="text-xl">💰</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-black text-base mb-1">Economia de Até R$ 200</h4>
+                                            <p class="text-pink-200 text-sm">Crie seu próprio creme profissional</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-xl border-2 border-green-500/30">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                                            <span class="text-xl">✨</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-black text-base mb-1">Cheio de Benefícios</h4>
+                                            <p class="text-green-200 text-sm">Hidratação, nutrição e rejuvenescimento</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                    
+
                             <!-- COLUNA DIREITA: Depoimentos -->
-                            <div>
-                            <!-- Depoimentos -->
-                            <div class="space-y-4">
-                                    
-                                    <!-- EMBED REMOVIDO (ESCONDIDO) --><blockquote style="display:none;" data-instgrm-permalink="https://www.instagram.com/reel/DPoMAsGDonF/?utm_source=ig_embed&;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:500px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DPoMAsGDonF/?utm_source=ig_embed&;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver essa foto no Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DPoMAsGDonF/?utm_source=ig_embed&;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Uma publicação compartilhada por Vivaloe (@vivaloeoficial)</a></p></div></blockquote>
-                            <!-- Depoimentos -->
-                            <div class="space-y-4">
+                            <div class="flex flex-col">
+                                <!-- Depoimentos -->
+                                <div class="space-y-4 flex-1">
                                     <!-- Título Depoimentos -->
                                     <div class="bg-gradient-to-r from-yellow-400 to-orange-400 p-4 rounded-xl text-center">
                                         <p class="text-gray-900 font-black text-lg">
@@ -2686,100 +2637,11 @@
                 </h2>
             </div>
 
-            <!-- Grid: 3 Colunas de Depoimentos -->
+            <!-- Grid: 2 Fileiras x 3 Colunas de Especialistas -->
             <div class="max-w-7xl mx-auto mb-16">
                 <div class="grid lg:grid-cols-3 gap-8 mb-12">
                     
-                    <!-- DEPOIMENTO 1: Joana M. - Cabelo -->
-                    <div class="group bg-gradient-to-br from-green-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-2 border-green-200 hover:border-green-400">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                <span class="text-3xl">👩</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-black text-gray-900">Joana M.</h3>
-                                <div class="flex gap-1 text-yellow-500 text-lg">
-                                    ⭐⭐⭐⭐⭐
-                                </div>
-                            </div>
-                        </div>
-                        <blockquote class="text-gray-700 text-lg leading-relaxed mb-4">
-                            "Meu cabelo está <strong class="text-green-600">mais forte e com um brilho</strong> que eu não via há anos. A babosa fresca <strong class="text-green-600">faz toda a diferença</strong>!"
-                        </blockquote>
-                        <div class="flex items-center gap-2 text-green-600 font-bold">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span class="text-sm">Cliente Verificada</span>
-                        </div>
-                    </div>
-
-                    <!-- DEPOIMENTO 2: Lucas P. - Pele/Suco -->
-                    <div class="group bg-gradient-to-br from-emerald-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-2 border-emerald-200 hover:border-emerald-400">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                <span class="text-3xl">👨</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-black text-gray-900">Lucas P.</h3>
-                                <div class="flex gap-1 text-yellow-500 text-lg">
-                                    ⭐⭐⭐⭐⭐
-                                </div>
-                            </div>
-                        </div>
-                        <blockquote class="text-gray-700 text-lg leading-relaxed mb-4">
-                            "Uso no rosto para <strong class="text-emerald-600">acalmar a pele</strong> e até nos meus sucos. É incrível ter um produto <strong class="text-emerald-600">tão puro e versátil</strong> em casa."
-                        </blockquote>
-                        <div class="flex items-center gap-2 text-emerald-600 font-bold">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span class="text-sm">Cliente Verificado</span>
-                        </div>
-                    </div>
-
-                    <!-- DEPOIMENTO 3: VÍDEO INCORPORADO - Geisa G. -->
-                    <div class="lg:row-span-3 bg-gradient-to-br from-purple-50 to-white p-6 rounded-3xl shadow-lg hover:shadow-2xl transition border-2 border-purple-200 hover:border-purple-400">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                <span class="text-3xl">🎬</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-black text-gray-900">Geisa G.</h3>
-                                <div class="flex gap-1 text-yellow-500 text-lg">
-                                    ⭐⭐⭐⭐⭐
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Vídeo Instagram Embed -->
-                        <div class="mb-4">
-                            <!-- Card Instagram Leve - Geisa -->
-                            <a href="https://www.instagram.com/reel/DPRA1vbjlpm/" target="_blank" rel="noopener" style="display: block; background: linear-gradient(135deg, #f9a8d4 0%, #c084fc 50%, #fb923c 100%); padding: 1.5rem; border-radius: 1.25rem; box-shadow: 0 8px 25px rgba(236, 72, 153, 0.3); text-decoration: none;">
-                                <div style="background: white; border-radius: 1rem; padding: 1.25rem; text-align: center;">
-                                    <div style="width: 64px; height: 64px; background: linear-gradient(135deg, #a855f7, #ec4899); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                                        <svg style="width: 36px; height: 36px; fill: white;" viewBox="0 0 24 24">
-                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
-                                            <path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4z"/>
-                                        </svg>
-                                    </div>
-                                    <h4 style="font-size: 1.125rem; font-weight: 900; color: #111827; margin-bottom: 0.5rem;">Depoimento Geisa</h4>
-                                    <p style="color: #a855f7; font-weight: 700; font-size: 0.875rem; margin-bottom: 0.5rem;">🎥 Ver vídeo completo</p>
-                                    <div style="color: #6b7280; font-size: 0.75rem;">@vivaloeoficial</div>
-                                </div>
-                            </a>
-                            <!-- EMBED REMOVIDO --><blockquote style="display:none;" data-instgrm-permalink="https://www.instagram.com/reel/DPRA1vbjlpm/?utm_source=ig_embed&;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DPRA1vbjlpm/?utm_source=ig_embed&;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver essa foto no Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DPRA1vbjlpm/?utm_source=ig_embed&;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Uma publicação compartilhada por Vivaloe (@vivaloeoficial)</a></p></div></blockquote>
-                        </div>
-                        
-                        <div class="flex items-center gap-2 text-purple-600 font-bold">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span class="text-sm">Depoimento em Vídeo</span>
-                        </div>
-                    </div>
-
-                    <!-- DEPOIMENTO 4: Dermatologista -->
+                    <!-- ESPECIALISTA 1: Dermatologista -->
                     <div class="group bg-gradient-to-br from-purple-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-2 border-purple-200 hover:border-purple-400">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -2787,7 +2649,7 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-black text-gray-900">Dra. Carolina Medeiros</h3>
-                                <p class="text-purple-600 font-bold">Dermatologista | CRM 98765-SP</p>
+                                <p class="text-purple-600 font-bold">Dermatologista</p>
                                 <div class="flex gap-1 text-yellow-500 text-lg">
                                     ⭐⭐⭐⭐⭐
                                 </div>
@@ -2800,11 +2662,11 @@
                             <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
-                            <span class="text-purple-600 font-bold text-sm">Especialista Verificado</span>
+                            <span class="text-purple-600 font-bold text-sm">Especialista Verificada</span>
                         </div>
                     </div>
 
-                    <!-- DEPOIMENTO 5: Tricologista -->
+                    <!-- ESPECIALISTA 2: Tricologista -->
                     <div class="group bg-gradient-to-br from-indigo-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-2 border-indigo-200 hover:border-indigo-400">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -2812,7 +2674,7 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-black text-gray-900">Juliana Martins</h3>
-                                <p class="text-indigo-600 font-bold">Tricologista Certificada | 12+ anos</p>
+                                <p class="text-indigo-600 font-bold">Tricologista Certificada</p>
                                 <div class="flex gap-1 text-yellow-500 text-lg">
                                     ⭐⭐⭐⭐⭐
                                 </div>
@@ -2829,7 +2691,7 @@
                         </div>
                     </div>
 
-                    <!-- DEPOIMENTO 6: Nutricionista -->
+                    <!-- ESPECIALISTA 3: Nutricionista -->
                     <div class="group bg-gradient-to-br from-orange-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-2 border-orange-200 hover:border-orange-400">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-16 h-16 bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -2837,7 +2699,7 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-black text-gray-900">Dra. Mariana Silva</h3>
-                                <p class="text-orange-600 font-bold">Nutricionista Funcional | CRN 54321-SP</p>
+                                <p class="text-orange-600 font-bold">Nutricionista Funcional</p>
                                 <div class="flex gap-1 text-yellow-500 text-lg">
                                     ⭐⭐⭐⭐⭐
                                 </div>
@@ -2854,7 +2716,7 @@
                         </div>
                     </div>
 
-                    <!-- DEPOIMENTO 7: Farmacêutica -->
+                    <!-- ESPECIALISTA 4: Farmacêutica -->
                     <div class="group bg-gradient-to-br from-teal-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-2 border-teal-200 hover:border-teal-400">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-16 h-16 bg-gradient-to-br from-teal-600 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -2862,7 +2724,7 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-black text-gray-900">Dra. Fernanda Costa</h3>
-                                <p class="text-teal-600 font-bold">Farmacêutica Estética | CRF 76543-SP</p>
+                                <p class="text-teal-600 font-bold">Farmacêutica Estética</p>
                                 <div class="flex gap-1 text-yellow-500 text-lg">
                                     ⭐⭐⭐⭐⭐
                                 </div>
@@ -2879,64 +2741,134 @@
                         </div>
                     </div>
 
+                    <!-- ESPECIALISTA 5: Esteticista (NOVO) -->
+                    <div class="group bg-gradient-to-br from-pink-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-2 border-pink-200 hover:border-pink-400">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-pink-600 to-rose-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">✨</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-gray-900">Ana Paula Rodrigues</h3>
+                                <p class="text-pink-600 font-bold">Esteticista Facial</p>
+                                <div class="flex gap-1 text-yellow-500 text-lg">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 text-lg leading-relaxed mb-4">
+                            "Utilizo babosa fresca em protocolos de <strong class="text-pink-600">rejuvenescimento facial e tratamento de manchas</strong>. A qualidade da VIVALOE permite criar máscaras naturais com resultados visíveis. Minhas clientes relatam <strong class="text-pink-600">pele mais luminosa e uniforme</strong> após poucas sessões."
+                        </blockquote>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-pink-600 font-bold text-sm">Especialista Verificada</span>
+                        </div>
+                    </div>
+
+                    <!-- ESPECIALISTA 6: Fitoterapeuta (NOVO) -->
+                    <div class="group bg-gradient-to-br from-lime-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition border-2 border-lime-200 hover:border-lime-400">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-lime-600 to-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🌿</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-gray-900">Dr. Roberto Almeida</h3>
+                                <p class="text-lime-600 font-bold">Fitoterapeuta</p>
+                                <div class="flex gap-1 text-yellow-500 text-lg">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 text-lg leading-relaxed mb-4">
+                            "Na fitoterapia, a <strong class="text-lime-600">pureza e frescor da planta</strong> são fundamentais para eficácia terapêutica. A babosa da VIVALOE mantém intactos os <strong class="text-lime-600">compostos bioativos essenciais</strong>, proporcionando benefícios completos para saúde digestiva, imunidade e regeneração celular."
+                        </blockquote>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-lime-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-lime-600 font-bold text-sm">Especialista Verificado</span>
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- SEÇÃO AUTORIDADE: NUTRICIONISTA -->
                 <div class="bg-gradient-to-br from-green-900 to-emerald-900 p-2 rounded-3xl shadow-2xl">
                     <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 md:p-12">
                         
-                        <!-- Badge Profissional -->
-                        <div class="text-center mb-8">
+                        <!-- Badge Profissional (CENTRALIZADO) -->
+                        <div class="mb-8 text-center">
                             <div class="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-black text-lg shadow-2xl mb-4 border-4 border-green-400">
                                 💚 VALIDADO POR ESPECIALISTA
                             </div>
                         </div>
 
-                        <!-- Grid: Vídeo + Info -->
+                        <!-- Grid Principal: 2 Colunas -->
                         <div class="grid lg:grid-cols-2 gap-8 items-start">
                             
-                            <!-- COLUNA ESQUERDA: Vídeo Incorporado da Nutricionista -->
-                            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border-2 border-green-500/30">
-                                <!-- Instagram Embed -->
-                                <blockquote class="instagram-media" loading="lazy" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DQUUL75jtVl/?utm_source=ig_embed&;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px auto; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DQUUL75jtVl/?utm_source=ig_embed&;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver essa foto no Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DQUUL75jtVl/?utm_source=ig_embed&;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Uma publicação compartilhada por Vivaloe (@vivaloeoficial)</a></p></div></blockquote>
-                                <script async src="//www.instagram.com/embed.js" loading="lazy"></script>
-                            </div>
-
-                            <!-- COLUNA DIREITA: Informações -->
+                            <!-- COLUNA ESQUERDA COMPLETA -->
                             <div>
-                                <div class="mb-6">
-                                    <h3 class="text-3xl md:text-4xl font-black text-white mb-3">
-                                        O que a Ciência Comprova
-                                    </h3>
-                                    <p class="text-green-300 text-xl font-bold mb-4">
-                                        A nutricionista <a href="https://www.instagram.com/nutri.monicametzgerlang" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-yellow-200 underline transition">@nutri.monicametzgerlang</a> explica:
-                                    </p>
-                                </div>
+                                <!-- Título e subtítulo -->
+                                <h3 class="text-3xl md:text-4xl font-black text-white mb-3">
+                                    O que a Ciência Comprova
+                                </h3>
+                                <p class="text-green-300 text-xl font-bold mb-8">
+                                    A nutricionista <a href="https://www.instagram.com/nutri.monicametzgerlang" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-yellow-200 underline transition">@nutri.monicametzgerlang</a> explica:
+                                </p>
+                                
+                                <!-- Card + Boxes -->
+                                <div class="space-y-4">
+                                <!-- Card Novo (altura GRANDE para igualar colunas) -->
+                                <a href="https://www.instagram.com/p/DQUUL75jtVl/" target="_blank" rel="noopener noreferrer" class="block group">
+                                    <div class="bg-white/5 backdrop-blur-sm p-5 rounded-2xl border-2 border-green-500/30 hover:border-green-400 transition-all duration-300">
+                                        <div class="bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300" style="min-height: 500px; padding: 3rem 2rem;">
+                                            <div class="text-center">
+                                                <div class="text-6xl mb-4">🌿</div>
+                                                <h4 class="text-white font-black text-2xl mb-3">Validação Científica</h4>
+                                                <p class="text-green-100 text-lg leading-relaxed mb-4">
+                                                    Aprovado por especialistas em nutrição e fitoterapia
+                                                </p>
+                                                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                                                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                    <span class="text-white font-bold text-sm">Ver Vídeo Completo</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
 
-                                <!-- Benefícios Validados -->
-                                <div class="space-y-4 mb-8">
-                                    <div class="flex items-start gap-4 bg-white/10 backdrop-blur-sm p-5 rounded-2xl border-2 border-green-500/30">
-                                        <div class="flex-shrink-0 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                                            <span class="text-2xl">🍃</span>
+                                <!-- Boxes Pequenos Embaixo do Card -->
+                                <div class="space-y-4">
+                                    <div class="flex items-start gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-2xl border-2 border-green-500/30">
+                                        <div class="flex-shrink-0 w-11 h-11 bg-green-500 rounded-full flex items-center justify-center">
+                                            <span class="text-xl">🍃</span>
                                         </div>
                                         <div>
-                                            <h4 class="text-white font-black text-lg mb-1">Digestão Saudável</h4>
+                                            <h4 class="text-white font-black text-base mb-1">Digestão Saudável</h4>
                                             <p class="text-green-200 text-sm">Auxilia no funcionamento intestinal e absorção de nutrientes</p>
                                         </div>
                                     </div>
 
-                                    <div class="flex items-start gap-4 bg-white/10 backdrop-blur-sm p-5 rounded-2xl border-2 border-emerald-500/30">
-                                        <div class="flex-shrink-0 w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center">
-                                            <span class="text-2xl">⚡</span>
+                                    <div class="flex items-start gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-2xl border-2 border-emerald-500/30">
+                                        <div class="flex-shrink-0 w-11 h-11 bg-emerald-500 rounded-full flex items-center justify-center">
+                                            <span class="text-xl">⚡</span>
                                         </div>
                                         <div>
-                                            <h4 class="text-white font-black text-lg mb-1">Energia Natural</h4>
+                                            <h4 class="text-white font-black text-base mb-1">Energia Natural</h4>
                                             <p class="text-emerald-200 text-sm">Rico em vitaminas do complexo B que combatem o cansaço</p>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            
+                            </div>
+                            <!-- FIM COLUNA ESQUERDA -->
 
-                                <!-- NOVA SEÇÃO: Saúde Intestinal -->
+                            <!-- COLUNA DIREITA: Box Grande Saúde Intestinal -->
+                            <div>
                                 <div class="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-sm p-6 rounded-2xl border-2 border-green-400/50">
                                     <h4 class="text-white font-black text-2xl mb-4 flex items-center gap-3">
                                         <span class="text-3xl">🦠</span>
@@ -3233,11 +3165,50 @@
                     </p>
                 </div>
 
-                <!-- Grid 3 Colunas -->
+                <!-- Grid 3 Colunas: Instagram Card + Depoimento -->
                 <div class="grid md:grid-cols-3 gap-8 mb-12">
                     
-                    <!-- COLUNA 1: 2 DEPOIMENTOS TEXTO EMPILHADOS -->
-                    <div class="space-y-8">
+                    <!-- COLUNA 1 -->
+                    <div class="space-y-6">
+                        <!-- Card Instagram 1 - Socorro -->
+                        <a href="https://www.instagram.com/p/DPwFkFpjgrH/" target="_blank" rel="noopener noreferrer" class="block group">
+                            <div class="relative bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500 rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition duration-300">
+                                <div class="aspect-[4/5] relative">
+                                    <!-- Gradient Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
+                                    
+                                    <!-- Instagram Icon Top Right -->
+                                    <div class="absolute top-4 right-4 z-20">
+                                        <div class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                                            <svg class="w-5 h-5 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Play Button Center -->
+                                    <div class="absolute inset-0 flex items-center justify-center z-10">
+                                        <div class="w-20 h-20 bg-white/95 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
+                                            <svg class="w-9 h-9 text-pink-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M8 5v14l11-7z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Bottom Info -->
+                                    <div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white font-bold">S</div>
+                                            <div>
+                                                <p class="text-white font-bold text-sm">Socorro</p>
+                                                <p class="text-white/80 text-xs">Depoimento em Vídeo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
                         <!-- DEPOIMENTO TEXTO 1 -->
                         <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500">
                             <div class="p-6">
@@ -3257,12 +3228,12 @@
                                 <!-- Cliente Info -->
                                 <div class="flex items-center gap-3">
                                     <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white font-black text-lg">
-                                        J
+                                        S
                                     </div>
                                     <div>
-                                        <div class="font-black text-gray-900">Juliana Mendes</div>
-                                        <div class="text-xs text-gray-600">São Paulo, SP</div>
-                                        <div class="text-xs text-purple-600 font-bold">Cliente há 3 meses</div>
+                                        <div class="font-black text-gray-900">Socorro</div>
+                                        <div class="text-xs text-gray-600">Cliente VIVALOE</div>
+                                        <div class="text-xs text-purple-600 font-bold">⭐⭐⭐⭐⭐ Avaliação Verificada</div>
                                     </div>
                                 </div>
                             </div>
@@ -3274,6 +3245,49 @@
                                 </div>
                             </div>
                         </div>
+
+                    </div>
+
+                    <!-- COLUNA 2 -->
+                    <div class="space-y-6">
+                        <!-- Card Instagram 2 - Geisa G. -->
+                        <a href="https://www.instagram.com/p/DPRA1vbjlpm/" target="_blank" rel="noopener noreferrer" class="block group">
+                            <div class="relative bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-500 rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition duration-300">
+                                <div class="aspect-[4/5] relative">
+                                    <!-- Gradient Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
+                                    
+                                    <!-- Instagram Icon Top Right -->
+                                    <div class="absolute top-4 right-4 z-20">
+                                        <div class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                                            <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Play Button Center -->
+                                    <div class="absolute inset-0 flex items-center justify-center z-10">
+                                        <div class="w-20 h-20 bg-white/95 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
+                                            <svg class="w-9 h-9 text-blue-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M8 5v14l11-7z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Bottom Info -->
+                                    <div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center text-white font-bold">G</div>
+                                            <div>
+                                                <p class="text-white font-bold text-sm">Geisa G.</p>
+                                                <p class="text-white/80 text-xs">Depoimento em Vídeo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
 
                         <!-- DEPOIMENTO TEXTO 2 -->
                         <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500">
@@ -3294,12 +3308,12 @@
                                 <!-- Cliente Info -->
                                 <div class="flex items-center gap-3">
                                     <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center text-white font-black text-lg">
-                                        M
+                                        G
                                     </div>
                                     <div>
-                                        <div class="font-black text-gray-900">Mariana Silva</div>
-                                        <div class="text-xs text-gray-600">Belo Horizonte, MG</div>
-                                        <div class="text-xs text-blue-600 font-bold">Cliente há 1 mês</div>
+                                        <div class="font-black text-gray-900">Geisa G.</div>
+                                        <div class="text-xs text-gray-600">Cliente VIVALOE</div>
+                                        <div class="text-xs text-blue-600 font-bold">⭐⭐⭐⭐⭐ Avaliação Verificada</div>
                                     </div>
                                 </div>
                             </div>
@@ -3311,6 +3325,48 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- COLUNA 3 -->
+                    <div class="space-y-6">
+                        <!-- Card Instagram 3 - Márcia -->
+                        <a href="https://www.instagram.com/p/DQ4XsbXjijT/" target="_blank" rel="noopener noreferrer" class="block group">
+                            <div class="relative bg-gradient-to-br from-green-600 via-emerald-500 to-teal-500 rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition duration-300">
+                                <div class="aspect-[4/5] relative">
+                                    <!-- Gradient Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
+                                    
+                                    <!-- Instagram Icon Top Right -->
+                                    <div class="absolute top-4 right-4 z-20">
+                                        <div class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                                            <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.40s.645 1.40 1.441 1.40c.795 0 1.439-.645 1.439-1.40s-.644-1.40-1.439-1.40z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Play Button Center -->
+                                    <div class="absolute inset-0 flex items-center justify-center z-10">
+                                        <div class="w-20 h-20 bg-white/95 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
+                                            <svg class="w-9 h-9 text-green-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M8 5v14l11-7z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Bottom Info -->
+                                    <div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full flex items-center justify-center text-white font-bold">M</div>
+                                            <div>
+                                                <p class="text-white font-bold text-sm">Márcia</p>
+                                                <p class="text-white/80 text-xs">Depoimento em Vídeo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
 
                         <!-- DEPOIMENTO TEXTO 3 -->
                         <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500">
@@ -3331,12 +3387,12 @@
                                 <!-- Cliente Info -->
                                 <div class="flex items-center gap-3">
                                     <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full flex items-center justify-center text-white font-black text-lg">
-                                        A
+                                        M
                                     </div>
                                     <div>
-                                        <div class="font-black text-gray-900">Amanda Lima</div>
-                                        <div class="text-xs text-gray-600">Rio de Janeiro, RJ</div>
-                                        <div class="text-xs text-green-600 font-bold">Cliente há 1 mês</div>
+                                        <div class="font-black text-gray-900">Márcia</div>
+                                        <div class="text-xs text-gray-600">Cliente VIVALOE</div>
+                                        <div class="text-xs text-green-600 font-bold">⭐⭐⭐⭐⭐ Avaliação Verificada</div>
                                     </div>
                                 </div>
                             </div>
@@ -3348,91 +3404,13 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
-                    <!-- COLUNA 2: INSTAGRAM PHOTO -->
-                    <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500">
-                        <!-- Screenshot Instagram -->
-                        <div class="relative">
-                            <img src="assets/fT9KKMI_iqlsLviJAQNg1.jpg" 
-                                 alt="Depoimento Instagram" 
-                                 class="w-full h-auto">
-                            
-                            <!-- Badge Instagram -->
-                            <div class="absolute top-4 right-4 bg-gradient-to-r from-purple-600 to-pink-600 px-3 py-2 rounded-full">
-                                <div class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                                    </svg>
-                                    <span class="text-white font-bold text-xs">Instagram</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- COLUNA 3: DEPOIMENTO EM VÍDEO -->
-                    <div class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500">
-                        <!-- Vídeo Instagram Embed -->
-                        <div class="relative bg-black flex items-center justify-center" style="min-height: 400px;">
-                            <blockquote class="instagram-media" loading="lazy" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DPwFkFpjgrH/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:100%; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                                <div style="padding:16px;">
-                                    <a href="https://www.instagram.com/reel/DPwFkFpjgrH/?utm_source=ig_embed&utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
-                                        <div style="display: flex; flex-direction: row; align-items: center;">
-                                            <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
-                                            <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
-                                                <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
-                                                <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
-                                            </div>
-                                        </div>
-                                        <div style="padding: 19% 0;"></div>
-                                        <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
-                                            <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <g transform="translate(-511.000000, -20.000000)" fill="#000000">
-                                                        <g>
-                                                            <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                        <div style="padding-top: 8px;">
-                                            <div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver essa foto no Instagram</div>
-                                        </div>
-                                        <div style="padding: 12.5% 0;"></div>
-                                        <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
-                                            <div>
-                                                <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div>
-                                                <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div>
-                                                <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div>
-                                            </div>
-                                            <div style="margin-left: 8px;">
-                                                <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div>
-                                                <div style="width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div>
-                                            </div>
-                                            <div style="margin-left: auto;">
-                                                <div style="width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div>
-                                                <div style="background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div>
-                                                <div style="width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div>
-                                            </div>
-                                        </div>
-                                        <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
-                                            <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div>
-                                            <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div>
-                                        </div>
-                                    </a>
-                                    <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
-                                        <a href="https://www.instagram.com/reel/DPwFkFpjgrH/?utm_source=ig_embed&utm_campaign=loading" style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Uma publicação compartilhada por Vivaloe (@vivaloeoficial)</a>
-                                    </p>
-                                </div>
-                            </blockquote>
-                            <script async src="//www.instagram.com/embed.js" loading="lazy"></script>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Social Proof Footer -->
-                <div class="text-center">
+                <!-- Social Proof Footer: APENAS AS BADGES -->
+                <div class="text-center mt-12">
                     <div class="inline-block bg-white/10 backdrop-blur-lg rounded-3xl px-10 py-6 border-2 border-white/20">
                         <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-white">
                             <div class="text-center">
@@ -3786,11 +3764,11 @@
                 </div>
 
                 <!-- Grid 2 Colunas: Imagem + Oferta -->
-                <div class="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:items-center">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <!-- COLUNA ESQUERDA: Foto Real das Folhas -->
-                    <div class="relative w-full order-1 lg:order-none">
+                    <div class="relative">
                         <div class="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500">
-                            <img src="assets/M3XzqBAI_P8ZuPzGg2_py.jpg" 
+                            <img src="assets/M3XzqBAI_P8ZuPzGg2_py.jpeg" 
                                  alt="Folhas Frescas VIVALOE Prontas Para Envio" 
                                  class="w-full h-auto">
                             
@@ -3832,7 +3810,7 @@
                     </div>
 
                     <!-- COLUNA DIREITA: Box de Oferta -->
-                    <div class="w-full order-2 lg:order-none">
+                    <div>
                         <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
                             <!-- Header Preço -->
                             <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white p-8 text-center">
@@ -4366,7 +4344,7 @@
         </div>
     </div>
 
-    <script type="module" defer>
+    <script type="module">
         // Instagram Video Player Function
         window.playInstagramVideo = function() {
             const container = document.getElementById('instagramVideoContainer');
