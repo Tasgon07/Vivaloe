@@ -214,6 +214,13 @@
                 height: 3rem !important;
             }
             
+            /* Garante visibilidade do "Ver Vídeo Completo" no mobile */
+            .inline-flex.items-center span {
+                display: inline !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            
             .w-12.h-12 {
                 width: 2.5rem !important;
                 height: 2.5rem !important;
@@ -284,9 +291,15 @@
                 display: none !important;
             }
             
-            /* Ocultar badge "FÓRMULA #1, #2, #3, #4" */
-            .bg-white\/20.backdrop-blur-sm.px-4.py-2.rounded-full {
+            /* Ocultar badge "FÓRMULA #1, #2, #3, #4" MAS manter "Ver Vídeo Completo" */
+            .bg-white\/20.backdrop-blur-sm.px-4.py-2.rounded-full:not(.inline-flex) {
                 display: none !important;
+            }
+            
+            /* Garantir que o botão "Ver Vídeo Completo" apareça */
+            .inline-flex.bg-white\/20.backdrop-blur-sm {
+                display: inline-flex !important;
+                visibility: visible !important;
             }
             
             /* Reduzir espaçamento superior dos cards */
